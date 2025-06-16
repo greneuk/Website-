@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behaviour Journal</title>
+    <!-- New font pairing: Nunito (for body) and Poppins (for headline) -->
+    <!-- Added 900 weight for Poppins for extra bold text -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif; /* Applied Nunito for general body text */
+            background-color: #f8f8f8;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-family: 'Poppins', sans-serif; /* Applied Poppins for the main headline */
+            letter-spacing: -0.025em; /* Reduced letter spacing for a tighter feel */
+        }
+        /* Applying Poppins font to specific h2 headings */
+        #markets h2,
+        #testimonials h2,
+        #waitlist h2 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .login-button { /* Now applied to Contact button */
+            background-color: #d9ff00;
+            color: #000;
+            padding: 8px 24px;
+            border-radius: 10px; /* Reduced corner radius */
+            font-weight: 600;
+            border: 2px solid #000; /* Black outline */
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1); /* Drop shadow */
+        }
+        .get-started-button { /* Primary CTA for waitlist in hero/form */
+            background-color: #000;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px; /* Reduced corner radius */
+            font-weight: 600;
+            border: 2px solid #000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .get-started-button:hover {
+            background-color: #333;
+        }
+        .our-plans-button { /* Secondary CTA for demo (removed but style remains for reference) */
+            background-color: #d9ff00;
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 9999px; /* rounded-full */
+            font-weight: 600;
+            border: 2px solid #d9ff00;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .our-plans-button:hover {
+            background-color: #c0eb00;
+        }
+        .card-light {
+            background-color: #fff; /* General card background */
+            border-radius: 20px;
+            padding: 32px;
+            border: 2px solid #000;
+            box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+        }
+        .mock-illustration {
+            background-color: #e0e0e0; /* Placeholder color */
+            border-radius: 10px;
+        }
+        .mock-illustration-hero {
+            background-color: #e0e0e0; /* Placeholder color */
+            border-radius: 10px;
+        }
+        .icon-circle {
+            background-color: #d9ff00;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000;
+            flex-shrink: 0;
+            margin-bottom: 16px;
+        }
+        .icon-circle .material-icons { /* Styling for Material Icons inside the circle */
+            font-size: 32px; /* Adjust size as needed */
+            color: #000;
+        }
+        /* Uber-style form fields */
+        input[type="email"],
+        input[type="text"],
+        select {
+            border: none; /* Remove all borders */
+            border-bottom: 2px solid #000; /* Add black bottom border */
+            border-radius: 0; /* Remove border-radius */
+            background-color: #f0f0f0; /* Subtle background */
+            padding: 12px 0px; /* Adjust padding, remove horizontal padding */
+            width: 100%;
+            margin-bottom: 24px; /* Increased margin for spacing */
+            font-size: 1rem;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #d9ff00; /* Highlight bottom border on focus */
+            background-color: #fff; /* White background on focus */
+            box-shadow: none; /* Remove existing box shadow for focus */
+        }
+        label {
+            margin-bottom: 8px; /* Add some space below label */
+            display: block; /* Ensure label takes full width */
+        }
+
+
+        /* Carousel specific styles */
+        .testimonial-carousel-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            scroll-snap-type: x mandatory; /* Snaps to each testimonial */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            gap: 2rem; /* Space between testimonials */
+            padding-bottom: 1rem; /* Space for scrollbar */
+            scroll-behavior: smooth; /* Smooth scroll on button click/swipe */
+        }
+        .testimonial-card {
+            flex: 0 0 auto; /* Do not grow, do not shrink, base size is auto */
+            width: 100%; /* Each card takes full width of the container */
+            max-width: 600px; /* Max width for individual testimonial card */
+            scroll-snap-align: center; /* Align to center for snapping */
+            margin: auto; /* Center the card if not filling full width */
+            background-color: #fff; /* Background for testimonial cards */
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border: 2px solid #000;
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        .testimonial-carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .testimonial-carousel-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="container mx-auto">
+        <!-- Header -->
+        <header class="flex flex-col sm:flex-row items-center sm:justify-between py-4">
+            <div class="flex items-center mb-4 sm:mb-0">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                    <rect x="0" y="0" width="24" height="24" fill="#D9FF00"/>
+                    <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12 19C8.686 19 6 16.314 6 13C6 9.686 8.686 7 12 7C15.314 7 18 9.686 18 13C18 16.314 15.314 19 12 19ZM10.5 11.5L9 13L10.5 14.5L12 13L10.5 11.5ZM13.5 11.5L12 13L13.5 14.5L15 13L13.5 11.5Z" fill="#000"/>
+                </svg>
+                <span class="font-black text-lg">Behaviour Journal</span> <!-- Applied font-black for extra boldness -->
+            </div>
+            <nav class="flex flex-wrap items-center justify-center sm:justify-end space-x-2 sm:space-x-4 md:space-x-6 mt-4 sm:mt-0">
+                <a href="#testimonials" class="text-gray-700 hover:text-black font-semibold px-2 py-1">Testimonials</a>
+                <a href="#waitlist" class="text-gray-700 hover:text-black font-semibold px-2 py-1">Waitlist</a>
+                <a href="#contact" class="login-button ml-2">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="flex flex-col lg:flex-row items-center justify-between mt-16 lg:mt-24">
+            <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+                <!-- Headline rotates dynamically by audience -->
+                <h1 class="text-5xl lg:text-6xl font-black leading-tight mb-4">
+                    For ABA Clinics: <br class="hidden sm:block"> Ditch Paper, Boost Compliance.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-md">
+                    Collect, analyze, and share ABC data in seconds – trusted by 10,000+ clinicians worldwide.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="get-started-button">Join Our Professional Waitlist</button>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">
+                    No credit card required. Built with BCBAs.
+                </p>
+            </div>
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                <!-- Mobile UI illustration -->
+                <div class="mock-illustration-hero w-full lg:w-[600px] h-[350px] lg:h-[450px] flex items-center justify-center border-2 border-black rounded-lg overflow-hidden">
+                    <img src="https://placehold.co/600x450/e0e0e0/000?text=Mobile+UI+Illustration" alt="Mobile User Interface Illustration" class="w-full h-full object-cover rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Market-Specific Value Grid -->
+        <section id="markets" class="mt-24">
+            <h2 class="text-4xl font-bold text-center mb-12">Designed for Your Workflow</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- ABA Agencies & Private Practices -->
+                <div class="card-light flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <span class="material-icons">insights</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">For ABA Agencies:</h3>
+                    <p class="text-gray-700">Reduce documentation time by 50% while ensuring audit-ready compliance.</p>
+                </div>
+
+                <!-- Special Education Departments (Schools/Districts) -->
+                <div class="card-light flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <span class="material-icons">school</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">For Schools:</h3>
+                    <p class="text-gray-700">Streamline IEP behavioral data tracking and share insights in one click.</p>
+                </div>
+
+                <!-- Mental/Behavioral Health Clinics -->
+                <div class="card-light flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <span class="material-icons">health_and_safety</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">For Clinics:</h3>
+                    <p class="text-gray-700">Integrate ABC data directly into treatment plans without double-entry.</p>
+                </div>
+
+                <!-- Residential Care/Rehab Centers -->
+                <div class="card-light flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <span class="material-icons">home</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">For Care Centers:</h3>
+                    <p class="text-gray-700">Real-time behavior logs for safer, data-driven care transitions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Section -->
+        <section id="testimonials" class="mt-24 bg-white p-8 md:p-12 rounded-lg border-2 border-black shadow-lg">
+            <h2 class="text-4xl font-bold text-center mb-12">Trusted by Professionals</h2>
+
+            <div class="testimonial-carousel-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "Our ABA team cut reporting time from 3 hours to 20 minutes weekly with Behaviour Journal – it's a game-changer for compliance and efficiency!"
+                    </p>
+                    <p class="font-semibold text-lg text-black">- [Name], BCBA, Clinical Director</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "Behaviour Journal has transformed our IEP data collection. It's incredibly easy to use, and sharing insights with parents has never been smoother."
+                    </p>
+                    <p class="font-semibold text-lg text-black">- Sarah P., Special Ed Coordinator</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "Integrating ABC data into our EHR was a headache until Behaviour Journal. Now, our clinicians can focus on care, not paperwork."
+                    </p>
+                    <p class="font-semibold text-lg text-black">- Dr. Alex Chen, Clinical Psychologist</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "The real-time logging feature is a lifesaver for shift handovers. Our residential care team feels more connected and informed, leading to better resident outcomes."
+                    </p>
+                    <p class="font-semibold text-lg text-black">- David K., Residential Care Manager</p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "Finally, an ABC tool that truly understands the needs of a busy practice. The compliance features give us peace of mind."
+                    </p>
+                    <p class="font-semibold text-lg text-black">- Emily R., Lead ABA Therapist</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center space-x-6 sm:space-x-10 mt-12 text-gray-500 font-semibold text-lg">
+                <span>NHS Digital</span>
+                <span>|</span>
+                <span>GDPR</span>
+            </div>
+        </section>
+
+        <!-- Waitlist Flow Section -->
+        <section id="waitlist" class="mt-24 bg-white p-8 md:p-12 rounded-lg border-2 border-black shadow-lg">
+            <h2 class="text-4xl font-bold text-center mb-8">Join Our Professional Waitlist</h2>
+            <p class="text-center text-gray-700 mb-8">
+                Limited pilot slots available – priority access for early signups!
+            </p>
+            <form class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@organization.com" required>
+                </div>
+                <div class="mb-4">
+                    <label for="role" class="block text-gray-700 text-sm font-bold mb-2">Your Role</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select your role</option>
+                        <option value="aba-therapist">ABA Therapist</option>
+                        <option value="special-ed-director">Special Ed Director</option>
+                        <option value="mental-health-clinician">Mental/Behavioral Health Clinician</option>
+                        <option value="residential-care-manager">Residential Care Manager</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label for="organization" class="block text-gray-700 text-sm font-bold mb-2">Organization Name</label>
+                    <input type="text" id="organization" name="organization" placeholder="Your Organization" required>
+                </div>
+                <button type="submit" class="get-started-button w-full">Secure My Early Access</button>
+                <p class="text-center text-sm text-gray-600 mt-4">
+                    Get our free ABC Checklist for [Selected Role] upon launch!
+                </p>
+                <p class="text-center text-xs text-gray-500 mt-4">
+                    By joining, you agree to our privacy policy. GDPR/HIPAA compliant data handling.
+                </p>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="flex flex-col md:flex-row items-center justify-between mt-24 py-8 text-gray-500 text-sm">
+            <div class="flex flex-wrap justify-center space-x-4 mb-4 md:mb-0">
+                <a href="#" class="hover:text-black">Privacy Policy</a>
+                <a href="#" class="hover:text-black">Terms of Service</a>
+                <a href="#" class="hover:text-black">Support</a>
+                <a href="#" class="hover:text-black">Contact Us</a>
+            </div>
+            <div class="text-center md:text-right">
+                © Behaviour Journal. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
