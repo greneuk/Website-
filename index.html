@@ -79,8 +79,11 @@
             border-radius: 10px;
         }
         .mock-illustration-hero {
-            background-color: #e0e0e0; /* Placeholder color */
+            background-color: #d8ff00; /* Updated placeholder background color */
             border-radius: 10px;
+            border: 2px solid #000; /* Added black border */
+            box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1); /* Updated drop shadow to black */
+            padding-top: 40px; /* Added 40px padding to the top */
         }
         .icon-circle {
             background-color: #d8ff00; /* Reverted to original yellowish-green */
@@ -171,6 +174,19 @@
             letter-spacing: -0.025em;
             display: block; /* Ensure it takes its own line */
         }
+
+        /* Floating animation for illustration - REMOVED */
+        /*
+        @keyframes float-horizontal {
+            0% { transform: translateX(0px); }
+            50% { transform: translateX(-10px); }
+            100% { transform: translateX(0px); }
+        }
+        */
+
+        .floating-illustration {
+            /* animation: float-horizontal 3s ease-in-out infinite; */ /* Animation removed */
+        }
     </style>
 </head>
 <body>
@@ -178,7 +194,7 @@
         <!-- Header -->
         <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4">
             <div class="w-full flex justify-start mb-4 sm:mb-0">
-                <img src="https://raw.githubusercontent.com/greneuk/Website-/refs/heads/main/Still%20trying.svg" alt="Grene Logo" class="w-auto h-auto mr-2">
+                <img src="https://raw.githubusercontent.com/greneuk/Website-/refs/heads/main/Small%20logo%20Grene%20.svg" alt="Grene Logo" class="w-auto h-auto mr-2">
             </div>
             <nav class="flex flex-col sm:flex-row items-center justify-center sm:justify-end space-x-2 sm:space-x-4 md:space-x-6 mt-4 sm:mt-0">
                 <a href="#testimonials" class="text-gray-700 hover:text-black font-semibold px-2 py-1">Testimonials</a>
@@ -206,8 +222,8 @@
             </div>
             <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
                 <!-- Mobile UI illustration -->
-                <div class="mock-illustration-hero w-full lg:w-[600px] h-[350px] lg:h-[450px] flex items-center justify-center border-2 border-black rounded-lg overflow-hidden">
-                    <img src="https://placehold.co/600x450/e0e0e0/000?text=Mobile+UI+Illustration" alt="Mobile User Interface Illustration" class="w-full h-full object-cover rounded-lg">
+                <div class="mock-illustration-hero w-full lg:w-[600px] h-[350px] lg:h-[450px] flex items-center justify-center rounded-lg overflow-hidden">
+                    <img src="https://github.com/greneuk/Website-/blob/main/Illust%20with%20headroon.png?raw=true" alt="Mobile User Interface Illustration" class="w-4/5 h-auto object-contain rounded-lg floating-illustration">
                 </div>
             </div>
         </section>
@@ -301,7 +317,7 @@
             </div>
 
             <div class="flex flex-wrap justify-center items-center space-x-6 sm:space-x-10 mt-12 text-gray-500 font-semibold text-lg">
-                <span>NHS Digital</span>
+                <span>NHS Data Security & Protection Toolkit (DSPT)</span>
                 <span>|</span>
                 <span>GDPR</span>
             </div>
@@ -335,10 +351,10 @@
                 </div>
                 <button type="submit" class="get-started-button w-full">Secure My Early Access</button>
                 <p class="text-center text-sm text-gray-600 mt-4">
-                    Get our free ABC Checklist for [Selected Role] upon launch!
+                    Get our free ABC checklist.
                 </p>
                 <p class="text-center text-xs text-gray-500 mt-4">
-                    By joining, you agree to our privacy policy. GDPR/HIPAA compliant data handling.
+                    By joining, you agree to our privacy policy. GDPR compliant data handling.
                 </p>
             </form>
         </section>
