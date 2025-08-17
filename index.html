@@ -120,4 +120,391 @@
             box-shadow: none; /* Remove existing box shadow for focus */
         }
         label {
-            margin-
+            margin-bottom: 8px; /* Add some space below label */
+            display: block; /* Ensure label takes full width */
+        }
+
+
+        /* Carousel specific styles */
+        .testimonial-carousel-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            scroll-snap-type: x mandatory; /* Snaps to each testimonial */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            gap: 2rem; /* Space between testimonials */
+            padding-bottom: 1rem; /* Space for scrollbar */
+            scroll-behavior: smooth; /* Smooth scroll on button click/swipe */
+        }
+        .testimonial-card {
+            flex: 0 0 auto; /* Do not grow, do not shrink, base size is auto */
+            width: 100%; /* Each card takes full width of the container */
+            max-width: 600px; /* Max width for individual testimonial card */
+            scroll-snap-align: center; /* Align to center for snapping */
+            margin: auto; /* Center the card if not filling full width */
+            background-color: #fff; /* Background for testimonial cards */
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border: 2px solid #000;
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        .testimonial-carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .testimonial-carousel-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Animation for hero headline text */
+        @keyframes hero-fade-in-out {
+            0% { opacity: 0; transform: translateY(10px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        .animated-hero-text {
+            animation: hero-fade-in-out 8s infinite ease-in-out; /* Adjusted duration for smoother effect over longer phrases */
+            font-family: 'Poppins', sans-serif; /* Ensure Poppins font for the animated headline */
+            letter-spacing: -0.025em;
+            display: block; /* Ensure it takes its own line */
+        }
+
+        /* Floating animation for illustration - REMOVED */
+        /*
+        @keyframes float-horizontal {
+            0% { transform: translateX(0px); }
+            50% { transform: translateX(-10px); }
+            100% { transform: translateX(0px); }
+        }
+        */
+
+        .floating-illustration {
+            /* animation: float-horizontal 3s ease-in-out infinite; */ /* Animation removed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-8">
+                <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4">
+                        <div class="w-full flex justify-start mb-4 sm:mb-0 ml-[-2rem]">
+                <img src="https://raw.githubusercontent.com/greneuk/Website-/main/Grene_Logo%20Mark_V1_Black.png" alt="Grene Logo" class="w-auto h-auto mr-2">
+            </div>
+            <nav class="flex flex-col sm:flex-row items-center justify-center sm:justify-end space-x-2 sm:space-x-4 md:space-x-6 mt-4 sm:mt-0">
+                <a href="#testimonials" class="text-gray-700 hover:text-black font-semibold px-2 py-1">Testimonials</a>
+                <a href="#waitlist" class="text-gray-700 hover:text-black font-semibold px-2 py-1">Waitlist</a>
+                <a href="#contact" class="login-button ml-2">Contact</a>
+            </nav>
+        </header>
+
+                <section class="flex flex-col lg:flex-row items-center justify-between mt-16 lg:mt-24">
+            <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+                                <h1 class="text-5xl lg:text-6xl font-black leading-tight mb-4">
+                    <span id="dynamic-hero-headline" class="animated-hero-text"></span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-md">
+                    Collect, analyze, and share ABC data in seconds – leveraging a proven strategy trusted by a growing community of professionals worldwide.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="get-started-button">Join Our Professional Waitlist</button>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">
+                    No credit card required. Built with BCBAs.
+                </p>
+            </div>
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                                <div class="mock-illustration-hero w-full lg:w-[600px] h-[350px] lg:h-[450px] flex items-center justify-center rounded-lg overflow-hidden">
+                    <img src="https://github.com/greneuk/Website-/blob/main/Illust%20with%20headroon.png?raw=true" alt="Mobile User Interface Illustration" class="w-4/5 h-auto object-contain rounded-lg floating-illustration">
+                </div>
+            </div>
+        </section>
+
+                <section id="markets" class="mt-24">
+            <h2 class="text-4xl font-bold text-center mb-12">Designed for Your Workflow</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                <div class="card-light flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <span class="material-icons">insights</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">For ABA Agencies:</h3>
+                    <p class="text-gray-700">Reduce documentation time by 50% while ensuring audit-ready compliance.</p>
+                </div>
+
+                                <div class="card-light flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <span class="material-icons">school</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">For Schools:</h3>
+                    <p class="text-gray-700">Streamline IEP behavioral data tracking and share insights in one click.</p>
+                </div>
+
+                                <div class="card-light flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <span class="material-icons">health_and_safety</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">For Clinics:</h3>
+                    <p class="text-gray-700">Integrate ABC data directly into treatment plans without double-entry.</p>
+                </div>
+
+                                <div class="card-light flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <span class="material-icons">home</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">For Care Providers:</h3>
+                    <p class="text-gray-700">Real-time behavior logs for safer, data-driven care transitions.</p>
+                </div>
+            </div>
+        </section>
+
+                <section id="testimonials" class="mt-24 bg-white p-8 md:p-12 rounded-lg border-2 border-black shadow-lg">
+            <h2 class="text-4xl font-bold text-center mb-12">Trusted by Professionals</h2>
+
+            <div class="testimonial-carousel-container">
+                                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "Our ABA team cut reporting time from 3 hours to 20 minutes weekly with Behaviour Journal – it's a game-changer for compliance and efficiency!"
+                    </p>
+                    <p class="font-semibold text-lg text-black">- Olivia Martinez, BCBA, Clinical Director</p>
+                </div>
+
+                                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "Behaviour Journal has transformed our IEP data collection. It's incredibly easy to use, and sharing insights with parents has never been smoother."
+                    </p>
+                    <p class="font-semibold text-lg text-black">- Sarah P., Special Ed Coordinator</p>
+                </div>
+
+                                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "Integrating ABC data into our EHR was a headache until Behaviour Journal. Now, our clinicians can focus on care, not paperwork."
+                    </p>
+                    <p class="font-semibold text-lg text-black">- Dr. Alex Chen, Clinical Psychologist</p>
+                </div>
+
+                                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "The real-time logging feature is a lifesaver for shift handovers. Our residential care team feels more connected and informed, leading to better resident outcomes."
+                    </p>
+                    <p class="font-semibold text-lg text-black">- David K., Residential Care Manager</p>
+                </div>
+
+                                <div class="testimonial-card">
+                    <p class="text-xl italic text-gray-700 mb-6">
+                        "Finally, an ABC tool that truly understands the needs of a busy practice. The compliance features give us peace of mind."
+                    </p>
+                    <p class="font-semibold text-lg text-black">- Emily R., Lead ABA Therapist</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center space-x-6 sm:space-x-10 mt-12 text-gray-500 font-semibold text-lg">
+                <span>NHS Data Security & Protection Toolkit (DSPT)</span>
+                <span>|</span>
+                <span>GDPR</span>
+            </div>
+        </section>
+
+                <section id="waitlist" class="mt-24 bg-white p-8 md:p-12 rounded-lg border-2 border-black shadow-lg">
+            <h2 class="text-4xl font-bold text-center mb-8">Join Our Professional Waitlist</h2>
+            <p class="text-center text-gray-700 mb-8">
+                Limited pilot slots available – priority access for early signups!
+            </p>
+            <form id="waitlist-form" class="max-w-md mx-auto" onsubmit="handleSubmit(event)">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@organization.com" required>
+                </div>
+                <div class="mb-4">
+                    <label for="role" class="block text-gray-700 text-sm font-bold mb-2">Your Role</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select your role</option>
+                        <option value="aba-therapist">ABA Therapist</option>
+                        <option value="special-ed-director">Special Ed Director</option>
+                        <option value="mental-health-clinician">Mental/Behavioral Health Clinician</option>
+                        <option value="residential-care-manager">Residential Care Manager</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label for="organization" class="block text-gray-700 text-sm font-bold mb-2">Organization Name</label>
+                    <input type="text" id="organization" name="organization" placeholder="Your Organization" required>
+                </div>
+                <button type="submit" class="get-started-button w-full" id="submit-button">Secure My Early Access</button>
+                <p class="text-center text-sm text-gray-600 mt-4">
+                    Get our free ABC checklist.
+                </p>
+                <p class="text-center text-xs text-gray-500 mt-4">
+                    By joining, you agree to our privacy policy. GDPR compliant data handling.
+                </p>
+                <div id="form-message" class="mt-4 text-center text-sm font-semibold"></div>
+            </form>
+        </section>
+
+                <footer id="contact" class="flex flex-col md:flex-row items-center justify-between mt-24 py-8 text-gray-500 text-sm">
+            <div class="flex flex-wrap justify-center space-x-4 mb-4 md:mb-0">
+                <a href="#" class="hover:text-black">Privacy Policy</a>
+                <a href="#" class="hover:text-black">Terms of Service</a>
+                <a href="#" class="hover:text-black">Support</a>
+                <a href="#" class="hover:text-black">Contact Us</a>
+            </div>
+            <div class="text-center md:text-right">
+                © Behaviour Journal. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <script type="module">
+        // Firebase imports
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        // If you plan to use Firebase Analytics, you will also need to import getAnalytics:
+        // import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
+
+
+        // --- YOUR ACTUAL FIREBASE CONFIGURATION ---
+        // This is the specific configuration for your 'grene-website-waitlist' Firebase project.
+        // It allows your website to connect to your Firebase services.
+        const firebaseConfig = {
+            apiKey: "AIzaSyCTai8unGpfMA0cAorHvDnCHQ8mAw_y59g",
+            authDomain: "grene-website-waitlist.firebaseapp.com",
+            projectId: "grene-website-waitlist",
+            storageBucket: "grene-website-waitlist.firebasestorage.app",
+            messagingSenderId: "143810927152",
+            appId: "1:143810927152:web:fdce9b07751e85bb8cebf5",
+            measurementId: "G-9Y04QSSX39"
+        };
+        // ------------------------------------------
+
+        // In the GitHub Pages context, we'll use firebaseConfig.projectId as a stable identifier for your app's data.
+        const appIdForFirestore = firebaseConfig.projectId;
+
+
+        let db;
+        let auth;
+        let userId = 'loading'; // Will be 'anonymous' or an actual UID once auth is ready
+
+        // Initialize Firebase and set up authentication
+        async function initializeFirebase() {
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                // If you enabled Analytics and want to use it:
+                // const analytics = getAnalytics(app);
+                // console.log("Firebase Analytics initialized (if enabled).");
+
+                // Sign in anonymously to get a userId for Firestore
+                await signInAnonymously(auth);
+                console.log("Signed in anonymously to Firebase.");
+
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        userId = user.uid;
+                        console.log("Firebase user authenticated with ID:", userId);
+                    } else {
+                        console.log("Firebase user is signed out.");
+                        userId = 'anonymous_fallback'; // Fallback if somehow signed out
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error initializing Firebase or signing in:", error);
+                const formMessage = document.getElementById('form-message');
+                formMessage.textContent = 'Error connecting to Firebase. Please check console and your Firebase config.';
+                formMessage.classList.add('text-red-600');
+            }
+        }
+
+        // Call initialization function when the script loads
+        initializeFirebase();
+
+        // Dynamic Hero Headline
+        const heroHeadlines = [
+            "For ABA Agencies: Ditch Paper, Boost Compliance.",
+            "For Schools: Streamline IEP Data, Share Insights.",
+            "For Clinics: Integrate ABC Data, Focus on Care.",
+            "For Care Providers: Real-time Logs, Better Outcomes."
+        ];
+        let currentHeadlineIndex = 0;
+        const dynamicHeroHeadlineElement = document.getElementById('dynamic-hero-headline');
+
+        function updateHeroHeadline() {
+            dynamicHeroHeadlineElement.classList.remove('animated-hero-text');
+            // Force reflow to restart animation
+            void dynamicHeroHeadlineElement.offsetWidth;
+            dynamicHeroHeadlineElement.classList.add('animated-hero-text');
+            dynamicHeroHeadlineElement.textContent = heroHeadlines[currentHeadlineIndex];
+            currentHeadlineIndex = (currentHeadlineIndex + 1) % heroHeadlines.length;
+        }
+
+        // Set initial headline
+        updateHeroHeadline();
+        // Change headline every 8 seconds (matching animation duration)
+        setInterval(updateHeroHeadline, 8000);
+
+        // Firebase integration for the waitlist form
+        async function handleSubmit(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = document.getElementById('waitlist-form');
+            const submitButton = document.getElementById('submit-button');
+            const formMessage = document.getElementById('form-message');
+
+            formMessage.textContent = 'Submitting...';
+            formMessage.classList.remove('text-green-600', 'text-red-600');
+            formMessage.classList.add('text-gray-700');
+            submitButton.disabled = true;
+
+            const formData = {
+                email: form.email.value,
+                role: form.role.value,
+                organization: form.organization.value,
+                timestamp: new Date().toISOString() // Use ISO string for consistent date format
+            };
+
+            try {
+                // Wait for userId to be ready before proceeding
+                if (userId === 'loading') {
+                    formMessage.textContent = 'Establishing secure connection... please try again in a moment.';
+                    formMessage.classList.remove('text-gray-700');
+                    formMessage.classList.add('text-red-600');
+                    return;
+                }
+
+                if (!db || !auth || userId === 'anonymous_fallback') {
+                    formMessage.textContent = 'Firebase connection failed. Check console for errors.';
+                    formMessage.classList.remove('text-gray-700');
+                    formMessage.classList.add('text-red-600');
+                    return;
+                }
+
+                // Path to the waitlist collection in Firestore for GitHub Pages
+                // Using projectId from config as the 'appId' segment
+                // Data will be stored under: artifacts/YOUR_PROJECT_ID/users/USER_ID/waitlist/
+                const waitlistCollectionRef = collection(db, `artifacts/${appIdForFirestore}/users/${userId}/waitlist`);
+
+                await addDoc(waitlistCollectionRef, formData);
+
+                formMessage.textContent = 'Thank you for joining! Your information has been saved.';
+                formMessage.classList.remove('text-gray-700');
+                formMessage.classList.add('text-green-600');
+                form.reset(); // Clear the form on success
+
+                // Placeholder for email delivery (requires Firebase Cloud Functions)
+                formMessage.textContent += " We'll email your ABC checklist shortly!";
+
+            } catch (error) {
+                console.error('Error submitting form to Firebase:', error);
+                formMessage.textContent = `Failed to submit: ${error.message}. Please check console for errors.`;
+                formMessage.classList.remove('text-gray-700');
+                formMessage.classList.add('text-red-600');
+            } finally {
+                submitButton.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
