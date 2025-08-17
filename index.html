@@ -20,4 +20,186 @@
             font-family: 'Poppins', sans-serif; /* Applied Poppins for the main headline */
             letter-spacing: -0.025em; /* Reduced letter spacing for a tighter feel */
         }
-        /* Applying Poppins font
+        /* Applying Poppins font to specific h2 headings */
+        #markets h2,
+        #testimonials h2,
+        #waitlist h2 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .login-button { /* Now applied to Contact button */
+            background-color: #d8ff00; /* Reverted to original yellowish-green */
+            color: #000;
+            padding: 8px 24px;
+            border-radius: 10px; /* Reduced corner radius */
+            font-weight: 600;
+            border: 2px solid #000; /* Black outline */
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1); /* Drop shadow */
+        }
+        .get-started-button { /* Primary CTA for waitlist in hero/form */
+            background-color: #000;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px; /* Reduced corner radius */
+            font-weight: 600;
+            border: 2px solid #000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .get-started-button:hover {
+            background-color: #333;
+        }
+        .our-plans-button { /* Secondary CTA for demo (removed but style remains for reference) */
+            background-color: #d8ff00; /* Reverted to original yellowish-green */
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 9999px; /* rounded-full */
+            font-weight: 600;
+            border: 2px solid #d8ff00; /* Reverted to original yellowish-green */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .our-plans-button:hover {
+            background-color: #b3cc00; /* Darker shade for hover */
+        }
+        .card-light {
+            background-color: #fff; /* General card background */
+            border-radius: 20px;
+            padding: 32px;
+            border: 2px solid #000;
+            box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for hover effect */
+        }
+        .card-light:hover {
+            transform: translateY(-5px) scale(1.02); /* Slightly lift and scale on hover */
+            box-shadow: 15px 15px 0px 0px rgba(0, 0, 0, 1); /* Enhanced shadow on hover */
+        }
+        .mock-illustration {
+            background-color: #e0e0e0; /* Placeholder color */
+            border-radius: 10px;
+        }
+        .mock-illustration-hero {
+            background-color: #d8ff00; /* Updated placeholder background color */
+            border-radius: 10px;
+            border: 2px solid #000; /* Added black border */
+            box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1); /* Updated drop shadow to black */
+            padding-top: 40px; /* Added 40px padding to the top */
+        }
+        .icon-circle {
+            background-color: #d8ff00; /* Reverted to original yellowish-green */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000;
+            flex-shrink: 0;
+            margin-bottom: 16px;
+        }
+        .icon-circle .material-icons { /* Styling for Material Icons inside the circle */
+            font-size: 32px; /* Adjust size as needed */
+            color: #000;
+        }
+        /* Uber-style form fields */
+        input[type="email"],
+        input[type="text"],
+        select {
+            border: none; /* Remove all borders */
+            border-bottom: 2px solid #000; /* Add black bottom border */
+            border-radius: 0; /* Remove border-radius */
+            background-color: #f0f0f0; /* Subtle background */
+            padding: 12px 0px; /* Adjust padding, remove horizontal padding */
+            width: 100%;
+            margin-bottom: 24px; /* Increased margin for spacing */
+            font-size: 1rem;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #d8ff00; /* Reverted to original yellowish-green */
+            background-color: #fff; /* White background on focus */
+            box-shadow: none; /* Remove existing box shadow for focus */
+        }
+        label {
+            margin-bottom: 8px; /* Add some space below label */
+            display: block; /* Ensure label takes full width */
+        }
+
+
+        /* Carousel specific styles */
+        .testimonial-carousel-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            scroll-snap-type: x mandatory; /* Snaps to each testimonial */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            gap: 2rem; /* Space between testimonials */
+            padding-bottom: 1rem; /* Space for scrollbar */
+            scroll-behavior: smooth; /* Smooth scroll on button click/swipe */
+        }
+        .testimonial-card {
+            flex: 0 0 auto; /* Do not grow, do not shrink, base size is auto */
+            width: 100%; /* Each card takes full width of the container */
+            max-width: 600px; /* Max width for individual testimonial card */
+            scroll-snap-align: center; /* Align to center for snapping */
+            margin: auto; /* Center the card if not filling full width */
+            background-color: #fff; /* Background for testimonial cards */
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border: 2px solid #000;
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        .testimonial-carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .testimonial-carousel-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Animation for hero headline text */
+        @keyframes hero-fade-in-out {
+            0% { opacity: 0; transform: translateY(10px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        .animated-hero-text {
+            animation: hero-fade-in-out 8s infinite ease-in-out; /* Adjusted duration for smoother effect over longer phrases */
+            font-family: 'Poppins', sans-serif; /* Ensure Poppins font for the animated headline */
+            letter-spacing: -0.025em;
+            display: block; /* Ensure it takes its own line */
+        }
+
+        /* Floating animation for illustration - REMOVED */
+        /*
+        @keyframes float-horizontal {
+            0% { transform: translateX(0px); }
+            50% { transform: translateX(-10px); }
+            100% { transform: translateX(0px); }
+        }
+        */
+
+        .floating-illustration {
+            /* animation: float-horizontal 3s ease-in-out infinite; */ /* Animation removed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-8">
+        <!-- Header -->
+        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4">
+            <!-- Adjusted div for logo to add negative margin for left alignment -->
+            <div class="w-full flex justify-start mb-4 sm:mb-0 ml-[-2rem]">
+                <img src="Grene_Logo Mark_V1_Black.png" alt="Grene Logo">
+            </div>
+            <!-- ... rest of header and page ... -->
+        </header>
+        <!-- ... rest of the page content ... -->
+    </div>
+</body>
+</html>
