@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Grene</title>
+
+    <!-- Font for headings: Nohemi from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Customizing Tailwind's default theme to match the design's colors and fonts
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#D8FF00', // Neon green
+                        'dark-bg': '#1e1e1e', // Dark background for cards
+                        'light-bg': '#f8f8f8', // Light background for the overall page
+                        'dark-text': '#1e1e1e', // Dark text color
+                        'light-text': '#f8f8f8', // Light text color
+                        'subtle-gray': '#e5e5e5', // Subtle gray for dividers/borders
+                    },
+                    fontFamily: {
+                        nohemi: ['Nohemi', 'sans-serif'],
+                        // Updated font family for the body to use Avenir and Helvetica
+                        sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<!-- Applying the new font families to the body and specific elements -->
+<body class="bg-light-bg font-sans text-dark-text">
+
+    <!-- Single main container for consistent horizontal padding and max-width on larger screens -->
+    <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-24">
+
+        <!-- Header Section: Logo and Navigation - Reused from the homepage for consistency -->
+        <header class="flex items-center justify-between py-6">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/1e1e1e/f8f8f8?text=G" alt="Grene Logo" class="h-8 md:h-10 rounded-full"/>
+            </div>
+            <!-- Navigation Links and Button - Updated styling to highlight active link -->
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-10">
+                <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+                <!-- The 'About' link now has a distinct neon green background with dark text for better visibility -->
+                <a href="about.html" class="text-sm font-semibold bg-primary text-dark-bg px-4 py-2 rounded-lg transition-colors">About</a>
+                <a href="contact.html" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                <a href="https://nowolabi.substack.com/" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
+                <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold hover:bg-dark-text hover:text-light-text transition-colors">Discover SwiftABC</a>
+            </nav>
+        </header>
+
+        <!-- About Page Hero Section -->
+        <section class="my-8 md:my-12 flex flex-col items-center text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 font-nohemi">
+                Inspired by London.<br>Built for people.
+            </h1>
+            <p class="text-dark-text max-w-2xl mb-6 leading-relaxed">
+                Born in the creative heart of Shoreditch, Grene was founded on the belief that technology can be a powerful force for compassion. We're a team of innovators, designers, and carers driven to transform support for learning disabilities with tools that are intuitive, intelligent, and human-centred.
+            </p>
+            <a href="#" class="bg-dark-bg text-light-text px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-primary hover:text-dark-bg transform transition-all hover:-translate-y-1">Our Mission</a>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="my-8 md:my-12">
+            <div class="bg-dark-bg text-light-text p-8 sm:p-12 rounded-3xl shadow-lg">
+                <div class="mb-8 text-center">
+                    <h2 class="text-4xl sm:text-5xl font-bold font-nohemi">Our Story</h2>
+                </div>
+                <!-- Image and text container - now stacked vertically and centered -->
+                <div class="flex flex-col items-center">
+                    <!-- Placeholder image is now centered above the text -->
+                    <div class="w-full max-w-md mb-8">
+                        <img src="https://placehold.co/600x400/D8FF00/1e1e1e?text=Creative+Process" alt="An illustration of a creative process, like a mind map" class="rounded-2xl shadow-lg w-full"/>
+                    </div>
+                    <!-- Text content is now below the image and centered with a max-width -->
+                    <div class="w-full max-w-2xl space-y-4 text-center">
+                        <p class="text-gray-400">
+                            Our journey began in a small studio in Shoreditch, where we were surrounded by a community of creators and problem-solvers. We noticed a major gap: while technology was advancing rapidly, many crucial sectors, particularly learning disability support, were still relying on outdated, paper-based systems.
+                        </p>
+                        <p class="text-gray-400">
+                            We saw an opportunity to bridge this gap by designing tools that are not just functional, but genuinely empowering. Our approach is inspired by the creative chaos of our neighbourhood—we turn complex problems into simple, beautiful, and effective solutions that give back time and energy to those who need it most.
+                        </p>
+                        <p class="text-gray-400">
+                            Grene is more than a company; it's a movement to bring innovative, compassionate technology to the forefront of care.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section - Reused from homepage -->
+        <section class="my-8 md:my-12">
+            <div class="flex flex-col items-center text-center bg-light-bg text-dark-text p-8 sm:p-12 rounded-3xl">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-dark-text mb-4 font-nohemi">Join the Movement</h2>
+                    <p class="text-dark-text max-w-lg mb-6 leading-relaxed">
+                        We are starting our journey with pioneering UK support providers. Be among the first to access SwiftABC and help us build the future of support tools.
+                    </p>
+                    <a href="#" class="bg-primary text-dark-bg px-8 py-3 rounded-full font-semibold hover:bg-dark-bg hover:text-primary transform transition-all hover:shadow-xl hover:-translate-y-1">Try SwiftABC</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section - Reused from the homepage -->
+    <footer class="bg-dark-bg text-light-text py-12 px-8 sm:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+            <div class="space-y-1">
+                <p>&copy; Grene 2025</p>
+                <p class="text-sm text-gray-400">A UK-based initiative</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="flex space-x-4 text-sm">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+                <a href="mailto:hello@grene.co.uk" class="text-sm font-semibold hover:text-primary transition-colors">hello@grene.co.uk</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
