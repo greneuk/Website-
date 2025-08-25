@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Grene</title>
+    
+    <!-- Font for headings: Nohemi from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Customizing Tailwind's default theme to match the design's colors and fonts
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#D8FF00',
+                        'dark-bg': '#1e1e1e',
+                        'light-bg': '#f8f8f8',
+                        'dark-text': '#1e1e1e',
+                        'light-text': '#f8f8f8',
+                        'subtle-gray': '#e5e5e5',
+                    },
+                    fontFamily: {
+                        nohemi: ['Nohemi', 'sans-serif'],
+                        sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-light-bg font-sans text-dark-text">
+    <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-24">
+        <!-- Header Section -->
+        <header class="flex items-center justify-between py-6">
+            <div class="flex items-center space-x-2">
+                <img src="Grene Neutrals (3).png" alt="Grene Logo" class="h-8 md:h-10"/>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-10">
+                <a href="index.html" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Home</a>
+                <a href="about.html" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">About</a>
+                <a href="https://nowolabi.substack.com/" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Blog</a>
+                <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold hover:bg-dark-text hover:text-light-text transition-all transform hover:scale-105">Discover SwiftABC</a>
+            </nav>
+        </header>
+
+        <!-- Main Content Section for Terms of Service -->
+        <section class="my-8 md:my-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 font-nohemi text-center">Terms of Service</h1>
+            <div class="prose max-w-none text-dark-text leading-relaxed">
+                <p><strong>This document is a placeholder and should not be considered legal advice. Please consult with a legal professional to draft a comprehensive and legally binding Terms of Service for your specific business.</strong></p>
+                <p>Welcome to Grene. By accessing or using our website and services, you agree to be bound by these Terms of Service.</p>
+                
+                <h2 class="text-2xl font-bold mt-8 mb-4 font-nohemi">1. Acceptance of Terms</h2>
+                <p>By using the Grene website, you agree to these terms. If you do not agree, you may not use our services.</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4 font-nohemi">2. User Responsibilities</h2>
+                <p>You agree to use our services in a responsible manner. You are responsible for any data you submit and for maintaining the confidentiality of your account information.</p>
+                
+                <h2 class="text-2xl font-bold mt-8 mb-4 font-nohemi">3. Intellectual Property</h2>
+                <p>All content on this website, including text, graphics, logos, and software, is the property of Grene or its content suppliers and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works from our content without express permission.</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4 font-nohemi">4. Disclaimer of Warranties</h2>
+                <p>Our services are provided "as is" and "as available" without any warranties of any kind. We do not guarantee that our services will be uninterrupted, error-free, or secure.</p>
+                
+                <h2 class="text-2xl font-bold mt-8 mb-4 font-nohemi">5. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, Grene shall not be liable for any indirect, incidental, special, or consequential damages arising out of your use of our services.</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4 font-nohemi">6. Changes to Terms</h2>
+                <p>We reserve the right to modify these terms at any time. Your continued use of the service after such changes constitutes your acceptance of the new terms.</p>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="bg-dark-bg text-light-text py-12 px-8 sm:px-12 lg:px-24 mt-12">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+                <div class="space-y-1">
+                    <p>&copy; Grene 2025</p>
+                    <p class="text-sm text-gray-400">A UK-based initiative</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex space-x-4 text-sm">
+                        <a href="privacy-policy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="hover:text-primary transition-colors">Terms of Service</a>
+                    </div>
+                    <div class="text-sm font-semibold flex flex-col items-center md:items-start">
+                        <p class="mb-1">Contact</p>
+                        <p class="mb-1">1 Rivington Pl, London EC2A 3BA</p>
+                        <a href="mailto:hello@grene.co.uk" class="hover:text-primary transition-colors">hello@grene.co.uk</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
