@@ -45,7 +45,7 @@
         <!-- Header Section: Logo and Navigation - Reused from the homepage for consistency -->
         <header class="flex items-center justify-between py-6">
             <div class="flex items-center space-x-2">
-                <img src="https://placehold.co/40x40/1e1e1e/f8f8f8?text=G" alt="Grene Logo" class="h-8 md:h-10 rounded-full"/>
+                <img src="Grene Neutrals (3).png" alt="Grene Logo" class="h-8 md:h-10 rounded-full"/>
             </div>
             <!-- Navigation Links and Button - Updated styling to match homepage nav and add hover effects -->
             <nav class="hidden md:flex items-center space-x-6 lg:space-x-10">
@@ -53,8 +53,7 @@
                 <a href="index.html" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Home</a>
                 <!-- The 'About' link is now the active page with hover shadow effect -->
                 <a href="about.html" class="text-sm font-semibold bg-primary text-dark-bg px-4 py-2 rounded-lg transition-colors hover:shadow-md">About</a>
-                <!-- Other links now have a transform scale hover effect -->
-                <a href="contact.html" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Contact</a>
+                <!-- Blog link now has a transform scale hover effect -->
                 <a href="https://nowolabi.substack.com/" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Blog</a>
                 <!-- The 'Discover SwiftABC' button has been updated with a new styling and hover effect -->
                 <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold hover:bg-dark-text hover:text-light-text transition-all transform hover:scale-105">Discover SwiftABC</a>
@@ -114,19 +113,25 @@
         </section>
     </div>
 
-    <!-- Footer Section - Reused from the homepage -->
+    <!-- Footer Section - Updated with new contact information -->
     <footer class="bg-dark-bg text-light-text py-12 px-8 sm:px-12 lg:px-24">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+            <!-- Left side: Copyright & initiative -->
             <div class="space-y-1">
                 <p>&copy; Grene 2025</p>
                 <p class="text-sm text-gray-400">A UK-based initiative</p>
             </div>
+            <!-- Right side: Links & Email and now contact address -->
             <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
                 <div class="flex space-x-4 text-sm">
                     <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
                     <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
                 </div>
-                <a href="mailto:hello@grene.co.uk" class="text-sm font-semibold hover:text-primary transition-colors">hello@grene.co.uk</a>
+                <div class="text-sm font-semibold flex flex-col items-center md:items-start">
+                    <p class="mb-1">Contact</p>
+                    <p class="mb-1">1 Rivington Pl, London EC2A 3BA</p>
+                    <a href="mailto:hello@grene.co.uk" class="hover:text-primary transition-colors">hello@grene.co.uk</a>
+                </div>
             </div>
         </div>
     </footer>
