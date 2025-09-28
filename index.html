@@ -41,22 +41,21 @@
 
         <!-- Header Section -->
         <header class="flex items-center justify-between py-6">
-            <!-- Logo -->
+            <!-- Logo - Clicking the logo acts as the home link -->
             <div class="flex items-center space-x-2">
-                <!-- Grene logo image replaced from the placeholder -->
-                <img src="Grene Neutrals (3).png" alt="Grene Logo" class="h-8 md:h-10"/>
+                <a href="index.html">
+                    <img src="Grene Neutrals (3).png" alt="Grene Logo" class="h-8 md:h-10"/>
+                </a>
             </div>
             <!-- Desktop Navigation Links and Mobile Menu Button -->
             <div class="flex items-center space-x-6 lg:space-x-10">
                 <!-- Desktop Navigation (hidden on mobile) -->
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-10">
-                    <!-- The 'Home' link now has a distinct neon green background with dark text and a subtle shadow on hover -->
-                    <a href="index.html" class="text-sm font-semibold bg-primary text-dark-bg px-4 py-2 rounded-lg transition-colors hover:shadow-md">Home</a>
-                    <!-- Other links now have a transform scale hover effect -->
-                    <a href="about.html" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">About</a>
-                    <a href="https://nowolabi.substack.com/" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Blog</a>
-                    <!-- The 'Discover SwiftABC' button has been updated with a new styling and hover effect -->
-                    <a href="https://tally.so/r/wQbZG8" class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold hover:bg-dark-text hover:text-light-text transition-all transform hover:scale-105">Discover SwiftABC</a>
+                    <!-- Updated Navigation Links -->
+                    <a href="#" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Pricing</a>
+                    <a href="#" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Stories</a>
+                    <!-- CTA button changed to "Book Demo" -->
+                    <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold hover:bg-dark-text hover:text-light-text transition-all transform hover:scale-105">Book Demo</a>
                 </nav>
                 <!-- Mobile Menu Button (hidden on desktop) -->
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg focus:outline-none">
@@ -70,66 +69,35 @@
         <!-- Mobile Menu (initially hidden) -->
         <div id="mobile-menu" class="hidden md:hidden w-full bg-dark-bg text-light-text py-4 rounded-xl shadow-lg -mt-4">
             <nav class="flex flex-col items-center space-y-4">
-                <a href="index.html" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Home</a>
-                <a href="about.html" class="block py-2 text-xl font-medium hover:text-primary transition-colors">About</a>
-                <a href="https://nowolabi.substack.com/" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Blog</a>
-                <a href="https://tally.so/r/wQbZG8" class="block mt-4 px-6 py-3 border-2 border-light-text text-light-text rounded-lg font-semibold hover:bg-primary hover:text-dark-bg transition-colors">Discover SwiftABC</a>
+                <a href="#" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Pricing</a>
+                <a href="#" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Stories</a>
+                <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="block mt-4 px-6 py-3 border-2 border-light-text text-light-text rounded-lg font-semibold hover:bg-primary hover:text-dark-bg transition-colors">Book Demo</a>
             </nav>
         </div>
 
-        <!-- Hero Section -->
-        <section class="my-8 md:my-12 flex flex-col md:flex-row items-center justify-between">
-            <!-- Left side content - updated with new text -->
-            <div class="md:w-1/2 flex flex-col items-start text-center md:text-left">
+        <!-- Hero Section - Updated to be a single, centered column -->
+        <section class="my-16 flex flex-col items-center text-center">
+            
+            <!-- Text Content (H1, P, CTA) - Centered and constrained for readability -->
+            <div class="w-full max-w-xl flex flex-col items-center text-center">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 font-nohemi">
-                    Better Understanding.<br>Better Support.<br>A Better Life.
+                    Meaningful ABC data in seconds.
                 </h1>
-                <!-- Changed the text color to dark-text -->
-                <p class="text-dark-text max-w-lg mb-6 leading-relaxed">
-                    Grene provides intelligent tools for those who support individuals with learning disabilities. We turn data into compassion, and insights into action.
+                <!-- Paragraph text -->
+                <p class="text-dark-text max-w-lg mb-8 leading-relaxed">
+                    SwiftABC is designed to enable your frontline workers to record high-quality ABC data in under 30seconds, giving valuable time back to your team.
                 </p>
-                <!-- Updated button to be black with white text and less rounded -->
-                <a href="https://tally.so/r/wQbZG8" class="bg-dark-bg text-light-text px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-primary hover:text-dark-bg transform transition-all hover:-translate-y-1">Discover SwiftABC</a>
+                <!-- CTA Button -->
+                <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="bg-dark-bg text-light-text px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-primary hover:text-dark-bg transform transition-all hover:-translate-y-1 mb-12">Book Demo</a>
             </div>
-            <!-- Right side illustration - Updated with the new image -->
-            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                <img src="Illust with headroon.png" alt="An illustration of a diverse group of people" class="rounded-2xl shadow-lg"/>
-            </div>
-        </section>
-        <!-- The Challenge Section: Problem statement -->
-        <section class="my-8 md:my-12">
-            <!-- The content of this section is now centered using flexbox -->
-            <div class="flex flex-col items-center text-dark-text text-center">
-                <!-- The padding and font size have been reduced to make the background smaller -->
-                <div class="inline-block px-2 py-1 sm:px-3 sm:py-2 bg-primary rounded-md font-nohemi font-bold text-xl sm:text-2xl drop-shadow-[0_4px_0_#000000] mb-4">
-                    The Challenge
-                </div>
-                <!-- The text content now takes up the full width since the image is removed -->
-                <div class="md:w-full flex flex-col items-center">
-                    <p class="max-w-xl mb-6 leading-relaxed text-dark-text">
-                        In England, over 1.1 million people use learning disability services [Source: NHS Digital]. Yet, critical behaviour data is often trapped on paper:
-                        66% of care providers say paperwork reduces time for client care [Source: UK Care Guide].
-                        <!-- The text below has been changed to use a black background and white text -->
-                        <span class="bg-dark-bg text-light-text px-2 py-1 rounded-md">15+ minutes can be lost per incident on manual form-filling and filing.</span>
-                        This leads to delayed interventions, higher staff stress, and poorer outcomes.
-                    </p>
-                </div>
+            
+            <!-- Illustration - Centered underneath the CTA -->
+            <div class="w-full flex justify-center">
+                <!-- max-w-4xl makes the image slightly larger than the text block above it -->
+                <img src="Illust with headroon.png" alt="An illustration of a diverse group of people" class="rounded-2xl shadow-lg max-w-4xl w-full"/>
             </div>
         </section>
         
-        <!-- Our Solution Section -->
-        <section class="my-8 md:my-12">
-            <div class="flex flex-col items-center text-center bg-primary text-dark-text p-8 sm:p-12 rounded-3xl drop-shadow-[0_8px_0_#000000]">
-                <!-- Content is now full-width and centered -->
-                <div class="flex flex-col items-center">
-                    <h2 class="text-4xl sm:text-5xl font-bold leading-tight mb-4 font-nohemi">Our Solution: The Grene Way</h2>
-                    <p class="text-dark-text max-w-lg mb-6 leading-relaxed">
-                        Grene is the colour of regulation and growth. Our tools are designed to help individuals find their calm and thrive. We start by transforming <span class="bg-dark-bg text-primary px-2 py-1 rounded-md">the cornerstone of behavioural support: the ABC chart.</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <!-- NEW SwiftABC Section -->
         <section class="my-8 md:my-12">
             <div class="bg-dark-bg text-light-text p-8 sm:p-12 rounded-3xl shadow-lg">
@@ -175,49 +143,8 @@
             </div>
         </section>
 
-        <!-- Case Study Section -->
-        <section class="my-8 md:my-12">
-            <div class="mb-8">
-                <h2 class="text-4xl sm:text-5xl font-bold text-dark-text font-nohemi">The Ripple Effect of Better Data</h2>
-            </div>
-            <!-- Case Study Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Case Study Card 1 -->
-                <div class="bg-dark-bg text-light-text p-6 rounded-2xl">
-                    <h3 class="text-lg font-semibold mb-2 font-nohemi text-primary">For the Individual:</h3>
-                    <p class="text-gray-400 text-sm">
-                        Fewer incidents, faster interventions, and an improved quality of life. It’s support that empowers.
-                    </p>
-                </div>
-                <!-- Case Study Card 2 -->
-                <div class="bg-dark-bg text-light-text p-6 rounded-2xl">
-                    <h3 class="text-lg font-semibold font-nohemi text-primary">For the Support Worker:</h3>
-                    <p class="text-gray-400 text-sm">
-                        Reclaim 10+ hours a month on admin. Reduce stress with evidence-based clarity and confidence.
-                    </p>
-                </div>
-                <!-- Case Study Card 3 -->
-                <div class="bg-dark-bg text-light-text p-6 rounded-2xl">
-                    <h3 class="text-lg font-semibold font-nohemi text-primary">For the Organisation:</h3>
-                    <p class="text-gray-400 text-sm">
-                        Make Ofsted/CQC-ready reports in clicks. Demonstrate measurable outcomes and justify funding for interventions.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="my-8 md:my-12">
-            <div class="flex flex-col items-center text-center bg-light-bg text-dark-text p-8 sm:p-12 rounded-3xl">
-                <div class="flex flex-col items-center">
-                    <h2 class="text-4xl sm:text-5xl font-bold text-dark-text mb-4 font-nohemi">Join the Movement</h2>
-                    <p class="text-dark-text max-w-lg mb-6 leading-relaxed">
-                        We are starting our journey with pioneering UK support providers. Be among the first to access SwiftABC and help us build the future of support tools.
-                    </p>
-                    <a href="#" class="bg-primary text-dark-bg px-8 py-3 rounded-full font-semibold hover:bg-dark-bg hover:text-primary transform transition-all hover:shadow-xl hover:-translate-y-1">Try SwiftABC</a>
-                </div>
-            </div>
-        </section>
+        <!-- The Case Study Section and final CTA Section have been removed. -->
+        
     </div>
 
     <!-- Footer Section is now full-width -->
