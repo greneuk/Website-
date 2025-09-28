@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grene - Stories</title>
+    <!-- Font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Customizing Tailwind's default theme
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#D8FF00', // Neon green
+                        'dark-bg': '#1e1e1e', // Dark background for cards
+                        'light-bg': '#f8f8f8', // Light background for the overall page
+                        'dark-text': '#1e1e1e', // Dark text color
+                        'light-text': '#f8f8f8', // Light text color
+                        'subtle-gray': '#e5e5e5', // Subtle gray
+                    },
+                    fontFamily: {
+                        nohemi: ['Nohemi', 'sans-serif'],
+                        sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-light-bg font-sans text-dark-text">
+
+    <!-- Single main container for consistent horizontal padding -->
+    <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-24">
+
+        <!-- Header Section -->
+        <header class="flex items-center justify-between py-6">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <a href="index.html">
+                    <img src="Grene Neutrals (3).png" alt="Grene Logo" class="h-8 md:h-10"/>
+                </a>
+            </div>
+            <!-- Desktop Navigation Links and Mobile Menu Button -->
+            <div class="flex items-center space-x-6 lg:space-x-10">
+                <!-- Desktop Navigation (hidden on mobile) -->
+                <nav class="hidden md:flex items-center space-x-6 lg:space-x-10">
+                    <!-- Stories link - Active state styling -->
+                    <a href="stories.html" class="text-sm font-medium text-dark-text border-b-2 border-dark-text pb-1 transition-colors duration-200">Stories</a>
+                    <!-- Pricing link - Inactive state styling -->
+                    <a href="pricing.html" class="text-sm font-medium pb-1 border-b-2 border-transparent hover:border-dark-text hover:text-dark-text transition-colors duration-200">Pricing</a>
+                    <!-- CTA button changed to "Book Demo" -->
+                    <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold hover:bg-dark-text hover:text-light-text transition-all transform hover:scale-105">Book Demo</a>
+                </nav>
+                <!-- Mobile Menu Button (hidden on desktop) -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg focus:outline-none">
+                    <svg class="w-8 h-8 text-dark-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu (initially hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-dark-bg text-light-text py-4 rounded-xl shadow-lg -mt-4">
+            <nav class="flex flex-col items-center space-y-4">
+                <!-- Stories Mobile Active State -->
+                <a href="stories.html" class="block py-2 text-xl font-medium text-light-text transition-colors">Stories</a>
+                <a href="pricing.html" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Pricing</a>
+                <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="block mt-4 px-6 py-3 border-2 border-light-text text-light-text rounded-lg font-semibold hover:bg-primary hover:text-dark-bg transition-colors">Book Demo</a>
+            </nav>
+        </div>
+
+        <!-- Stories Hero Section -->
+        <section class="my-16 flex flex-col items-center text-center">
+            
+            <div class="w-full max-w-3xl flex flex-col items-center text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 font-nohemi">
+                    Stories of Impact.
+                </h1>
+                <p class="text-dark-text max-w-2xl mb-12 leading-relaxed text-lg">
+                    Read how SwiftABC is transforming data collection and enabling truly person-centred Positive Behaviour Support (PBS).
+                </p>
+                
+                <!-- Updated Case Studies/Stories Grid with more realistic content -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                    <!-- Story Card 1: Focus on Staff Experience & Data Accuracy - Name changed to Jade -->
+                    <div class="p-8 border border-subtle-gray rounded-xl text-left bg-white shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold font-nohemi mb-2 text-dark-text">Case Focus: Jade, Lead Support Worker</h3>
+                        <p class="text-sm text-gray-600 mb-4">Initial Success: Reducing Paperwork Stress</p>
+                        <p class="text-base leading-relaxed">Jade was overwhelmed by inconsistent paper forms and late data entries, leading to stress and inaccurate reports. SwiftABC's simple, guided interface meant she could log ABC data *instantly* at the point of care. Within one month, **data accuracy improved from 60% to over 95%**, making her end-of-week reviews finally feel meaningful and reliable...</p>
+                        <a href="#" class="mt-4 inline-block text-dark-text font-semibold border-b-2 border-primary hover:border-dark-text transition-colors">Read Full Story &rarr;</a>
+                    </div>
+
+                    <!-- Story Card 2: Focus on Quick Insight & Validation -->
+                    <div class="p-8 border border-subtle-gray rounded-xl text-left bg-white shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold font-nohemi mb-2 text-dark-text">Pilot Success: Validating a New Strategy</h3>
+                        <p class="text-sm text-gray-600 mb-4">Outcome: Immediate, Visual Proof</p>
+                        <p class="text-base leading-relaxed">A behaviour specialist used SwiftABC during a three-week pilot with one individual who was struggling with specific transition times. The clear, instant visualizations quickly confirmed their hypothesis that specific *loud noises* in the environment were the critical antecedent. This fast, visual evidence helped the team make **environmental adjustments within 7 days**...</p>
+                        <a href="#" class="mt-4 inline-block text-dark-text font-semibold border-b-2 border-primary hover:border-dark-text transition-colors">Read Full Story &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optional CTA (Matching Bulk Pricing style) -->
+        <section class="my-16 md:my-24">
+            <div class="p-8 sm:p-12 rounded-3xl border-2 border-dark-bg bg-light-bg text-dark-text text-center shadow-lg">
+                <h2 class="text-3xl sm:text-4xl font-bold font-nohemi mb-4">Ready to Write Your Own Success Story?</h2>
+                <p class="max-w-3xl mx-auto leading-relaxed text-lg">
+                    Stop fighting complexity. SwiftABC helps you increase data quality, gives your support workers time back to focus on care, and leads to a happier, more efficient team.
+                </p>
+                <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="mt-6 inline-block bg-dark-bg text-light-text px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-primary hover:text-dark-bg transform transition-all hover:-translate-y-1">
+                    Book a Demo Today
+                </a>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Footer Section is now full-width -->
+    <footer class="bg-dark-bg text-light-text py-12 px-8 sm:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+            <!-- Left side: Copyright & initiative -->
+            <div class="space-y-1">
+                <p>&copy; Grene 2025</p>
+                <p class="text-sm text-gray-400">A UK-based initiative</p>
+            </div>
+            <!-- Right side: Links & Email and now contact address -->
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="flex space-x-4 text-sm">
+                    <!-- Updated links to the new pages -->
+                    <a href="privacy-policy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+                <div class="text-sm font-semibold flex flex-col items-center md:items-start">
+                    <p class="mb-1">Contact</p>
+                    <p class="mb-1">1 Rivington Pl, London EC2A 3BA</p>
+                    <a href="mailto:hello@grene.co.uk" class="hover:text-primary transition-colors">hello@grene.co.uk</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle Logic ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
