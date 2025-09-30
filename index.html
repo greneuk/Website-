@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grene</title>
+    <title>Grene - Meaningful ABC data in seconds.</title>
     <!-- Font for headings -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,21 +11,20 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Customizing Tailwind's default theme to match the design's colors and new fonts
+        // Customizing Tailwind's default theme
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#D8FF00', // Neon green updated to #D8FF00
+                        'primary': '#D8FF00', // Neon green
                         'dark-bg': '#1e1e1e', // Dark background for cards
                         'light-bg': '#f8f8f8', // Light background for the overall page
                         'dark-text': '#1e1e1e', // Dark text color
                         'light-text': '#f8f8f8', // Light text color
-                        'subtle-gray': '#e5e5e5', // Subtle gray for dividers/borders
+                        'subtle-gray': '#e5e5e5', // Subtle gray
                     },
                     fontFamily: {
                         nohemi: ['Nohemi', 'sans-serif'],
-                        // Updated font family for the body to use Avenir and Helvetica
                         sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
                     },
                 },
@@ -33,7 +32,6 @@
         };
     </script>
 </head>
-<!-- Applying the new font families to the body and specific elements -->
 <body class="bg-light-bg font-sans text-dark-text">
 
     <!-- Single main container for consistent horizontal padding -->
@@ -41,7 +39,7 @@
 
         <!-- Header Section -->
         <header class="flex items-center justify-between py-6">
-            <!-- Logo - Clicking the logo acts as the home link -->
+            <!-- Logo -->
             <div class="flex items-center space-x-2">
                 <a href="index.html">
                     <img src="Grene Neutrals (3).png" alt="Grene Logo" class="h-8 md:h-10"/>
@@ -51,9 +49,10 @@
             <div class="flex items-center space-x-6 lg:space-x-10">
                 <!-- Desktop Navigation (hidden on mobile) -->
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-10">
-                    <!-- Updated Navigation Links -->
-                    <a href="#" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Pricing</a>
-                    <a href="#" class="text-sm font-medium hover:text-dark-text transition-all transform hover:scale-110">Stories</a>
+                    <!-- Stories link - Inactive, linked to stories.html -->
+                    <a href="stories.html" class="text-sm font-medium pb-1 border-b-2 border-transparent hover:border-dark-text hover:text-dark-text transition-colors duration-200">Stories</a>
+                    <!-- Pricing link - Inactive, linked to pricing.html -->
+                    <a href="pricing.html" class="text-sm font-medium pb-1 border-b-2 border-transparent hover:border-dark-text hover:text-dark-text transition-colors duration-200">Pricing</a>
                     <!-- CTA button changed to "Book Demo" -->
                     <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold hover:bg-dark-text hover:text-light-text transition-all transform hover:scale-105">Book Demo</a>
                 </nav>
@@ -69,81 +68,58 @@
         <!-- Mobile Menu (initially hidden) -->
         <div id="mobile-menu" class="hidden md:hidden w-full bg-dark-bg text-light-text py-4 rounded-xl shadow-lg -mt-4">
             <nav class="flex flex-col items-center space-y-4">
-                <a href="#" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Pricing</a>
-                <a href="#" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Stories</a>
+                <a href="stories.html" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Stories</a>
+                <a href="pricing.html" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Pricing</a>
                 <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="block mt-4 px-6 py-3 border-2 border-light-text text-light-text rounded-lg font-semibold hover:bg-primary hover:text-dark-bg transition-colors">Book Demo</a>
             </nav>
         </div>
 
-        <!-- Hero Section - Updated to be a single, centered column -->
-        <section class="my-16 flex flex-col items-center text-center">
-            
-            <!-- Text Content (H1, P, CTA) - Centered and constrained for readability -->
-            <div class="w-full max-w-xl flex flex-col items-center text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 font-nohemi">
+        <!-- Hero Section -->
+        <section class="my-16 md:my-24 flex flex-col items-center text-center">
+            <div class="max-w-xl mx-auto">
+                <!-- Centered Headline -->
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6 font-nohemi text-center">
                     Meaningful ABC data in seconds.
                 </h1>
-                <!-- Paragraph text -->
-                <p class="text-dark-text max-w-lg mb-8 leading-relaxed">
+                
+                <!-- Centered Paragraph -->
+                <p class="text-xl text-dark-text mb-8 leading-relaxed text-center">
                     SwiftABC is designed to enable your frontline workers to record high-quality ABC data in under 30seconds, giving valuable time back to your team.
                 </p>
-                <!-- CTA Button -->
-                <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="bg-dark-bg text-light-text px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-primary hover:text-dark-bg transform transition-all hover:-translate-y-1 mb-12">Book Demo</a>
-            </div>
-            
-            <!-- Illustration - Centered underneath the CTA -->
-            <div class="w-full flex justify-center">
-                <!-- max-w-4xl makes the image slightly larger than the text block above it -->
-                <img src="Illust with headroon.png" alt="An illustration of a diverse group of people" class="rounded-2xl shadow-lg max-w-4xl w-full"/>
-            </div>
-        </section>
-        
-        <!-- NEW SwiftABC Section -->
-        <section class="my-8 md:my-12">
-            <div class="bg-dark-bg text-light-text p-8 sm:p-12 rounded-3xl shadow-lg">
-                <div class="mb-8">
-                    <h2 class="text-4xl sm:text-5xl font-bold font-nohemi">Meet SwiftABC: Insight in an Instant</h2>
-                    <p class="text-light-text mt-2">The digital ABC form that captures behaviour data accurately and reveals patterns effortlessly.</p>
-                </div>
-                <!-- SwiftABC Features Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <!-- Feature List -->
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-3">
-                                <span class="text-primary text-xl flex-shrink-0">✓</span>
-                                <div>
-                                    <h3 class="font-semibold text-light-text">Log 65% Faster:</h3>
-                                    <p class="text-gray-400 text-sm">Replace clunky paper forms with a simple, 60-second digital process on any device.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="text-primary text-xl flex-shrink-0">✓</span>
-                                <div>
-                                    <h3 class="font-semibold text-light-text">See What Matters:</h3>
-                                    <p class="text-gray-400 text-sm">Automatic tracking and visual reports highlight triggers and consequences, so you can focus on support, not spreadsheets.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="text-primary text-xl flex-shrink-0">✓</span>
-                                <div>
-                                    <h3 class="font-semibold text-light-text">Unify Your Team:</h3>
-                                    <p class="text-gray-400 text-sm">Secure, instant sharing ensures everyone—from support workers to clinicians—has the same clear picture.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Concluding sentence for the section, spanning two columns on desktop -->
-                    <div class="md:col-span-2">
-                        <p class="text-lg font-medium text-light-text mt-8 md:mt-0 text-center">
-                            SwiftABC doesn't just record data; it reveals the path to better care.
-                        </p>
-                    </div>
+
+                <!-- Centered CTA -->
+                <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="inline-block bg-primary text-dark-bg px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-dark-text hover:text-light-text transform transition-all hover:scale-105">
+                    Book Demo
+                </a>
+
+                <!-- Centered Illustration Placeholder -->
+                <div class="mt-12">
+                    <img src="https://placehold.co/600x400/D8FF00/1e1e1e?text=ABC+Data+Illustration" alt="ABC Data Illustration" class="w-full h-auto rounded-xl shadow-2xl mx-auto"/>
                 </div>
             </div>
         </section>
 
-        <!-- The Case Study Section and final CTA Section have been removed. -->
+        <!-- Meet SwiftABC Feature Section (Updated to focus on user benefits) -->
+        <section class="my-16 md:my-24">
+            <h2 class="text-4xl sm:text-5xl font-bold leading-tight mb-12 font-nohemi text-center">Meet SwiftABC</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Feature 1: Increase data quality -->
+                <div class="bg-white text-dark-text p-6 pt-8 rounded-xl shadow-lg border-t-4 border-primary transition-shadow duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-bold font-nohemi mb-3 text-dark-text">Increase Data Quality</h3>
+                    <p class="text-sm text-gray-700">Guided prompts and real-time validation ensure complete, accurate, and consistent ABC data collection, every time.</p>
+                </div>
+                <!-- Feature 2: Simplify the Job -->
+                <div class="bg-white text-dark-text p-6 pt-8 rounded-xl shadow-lg border-t-4 border-primary transition-shadow duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-bold font-nohemi mb-3 text-dark-text">Simplify the Job</h3>
+                    <p class="text-sm text-gray-700">Designed for instant adoption, the simple, guided process reduces cognitive load and eliminates common frustrations found in complex paperwork.</p>
+                </div>
+                <!-- Feature 3: Give time back -->
+                <div class="bg-white text-dark-text p-6 pt-8 rounded-xl shadow-lg border-t-4 border-primary transition-shadow duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-bold font-nohemi mb-3 text-dark-text">Give Time Back</h3>
+                    <p class="text-sm text-gray-700">Capture complex behaviour data in under 30 seconds, eliminating manual paperwork and freeing up valuable time for care.</p>
+                </div>
+            </div>
+        </section>
         
     </div>
 
@@ -174,6 +150,7 @@
     <!-- JavaScript for Mobile Menu Toggle -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle Logic ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
