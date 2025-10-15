@@ -53,8 +53,15 @@
                     <a href="stories.html" class="text-sm font-medium pb-1 border-b-2 border-transparent hover:border-dark-text hover:text-dark-text transition-colors duration-200">Stories</a>
                     <!-- Pricing link - Inactive, linked to pricing.html -->
                     <a href="pricing.html" class="text-sm font-medium pb-1 border-b-2 border-transparent hover:border-dark-text hover:text-dark-text transition-colors duration-200">Pricing</a>
-                    <!-- CTA button changed to "Book Demo" (Dark button on light background) -->
-                    <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold hover:bg-dark-text hover:text-light-text transition-all transform hover:scale-105">Book Demo</a>
+                    <!-- CTA button with neobrutalist shadow and hover -->
+                    <a href="https://studio--swiftabc-ui-flex.us-central1.hosted.app/" 
+                       class="px-6 py-2 border-2 border-dark-text text-dark-text rounded-lg font-semibold bg-light-bg
+                              shadow-[4px_4px_0px_#1e1e1e] 
+                              transition-all transform 
+                              hover:bg-dark-text hover:text-light-text 
+                              hover:shadow-[6px_6px_0px_#1e1e1e] hover:-translate-x-0.5 hover:-translate-y-0.5">
+                        Book Demo
+                    </a>
                 </nav>
                 <!-- Mobile Menu Button (hidden on desktop) -->
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg focus:outline-none">
@@ -66,11 +73,17 @@
         </header>
 
         <!-- Mobile Menu (initially hidden) -->
-        <div id="mobile-menu" class="hidden md:hidden w-full bg-dark-bg text-light-text py-4 rounded-xl shadow-lg -mt-4">
+        <div id="mobile-menu" 
+             class="hidden md:hidden w-full bg-dark-bg text-light-text py-4 rounded-lg 
+                    border-4 border-dark-text shadow-[6px_6px_0px_#1e1e1e] -mt-4">
             <nav class="flex flex-col items-center space-y-4">
                 <a href="stories.html" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Stories</a>
                 <a href="pricing.html" class="block py-2 text-xl font-medium hover:text-primary transition-colors">Pricing</a>
-                <a href="https://calendly.com/hello-grene/30min" class="block mt-4 px-6 py-3 border-2 border-light-text text-light-text rounded-lg font-semibold hover:bg-primary hover:text-dark-bg transition-colors">Book Demo</a>
+                <a href="https://calendly.com/hello-grene/30min" 
+                   class="block mt-4 px-6 py-3 border-2 border-light-text text-light-text rounded-lg font-semibold 
+                          hover:bg-primary hover:text-dark-bg transition-colors">
+                    Book Demo
+                </a>
             </nav>
         </div>
 
@@ -87,40 +100,55 @@
                     SwiftABC is designed to enable your frontline workers to record high-quality ABC data in under 30seconds, giving valuable time back to your team.
                 </p>
 
-                <!-- Centered CTA - primary color accent -->
-                <a href="https://calendly.com/hello-grene/30min/" class="inline-block bg-primary text-dark-text border-2 border-primary px-8 py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transform transition-all hover:scale-105">
+                <!-- Centered CTA - primary color accent with neobrutalist shadow and hover -->
+                <a href="https://calendly.com/hello-grene/30min/" 
+                   class="inline-block bg-primary text-dark-text border-2 border-dark-text px-8 py-3 rounded-lg font-semibold 
+                          shadow-[4px_4px_0px_#1e1e1e] 
+                          transform transition-all 
+                          hover:shadow-[6px_6px_0px_#1e1e1e] hover:-translate-x-0.5 hover:-translate-y-0.5">
                     Book Demo
                 </a>
 
-                <!-- Centered Illustration Placeholder -->
+                <!-- Centered Illustration Placeholder (already neobrutalist) -->
                 <div class="mt-12">
-                    <!-- Reverted image source and added shadow back for depth against white background -->
-                    <img src="Hero image.png" alt="Screen mockups" class="w-full h-auto rounded-xl shadow-2xl mx-auto"/>
+                    <img src="Hero.png" 
+                         alt="Screen mockups" 
+                         class="w-full h-auto rounded-xl mx-auto 
+                                border-4 border-dark-text 
+                                shadow-[8px_8px_0px_#1e1e1e] 
+                                transition-all duration-300 hover:shadow-[12px_12px_0px_#1e1e1e] hover:-translate-y-0.5"
+                    />
                 </div>
             </div>
         </section>
 
-        <!-- Meet SwiftABC Feature Section (Dark Cards, Acid Lime Titles) -->
+        <!-- Meet SwiftABC Feature Section (Acid Lime Cards) -->
         <section class="my-16 md:my-24">
             <h2 class="text-4xl sm:text-5xl font-bold leading-tight mb-12 font-nohemi text-center">Meet SwiftABC</h2>
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <!-- Feature 1: Increase data quality -->
-                <div class="bg-dark-bg text-light-text p-6 pt-8 rounded-xl shadow-xl transition-shadow duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold font-nohemi mb-3 text-primary">Increase Data Quality</h3>
-                    <!-- Changed text color for better contrast on dark background -->
-                    <p class="text-sm text-gray-400">Guided prompts and real-time validation ensure complete, accurate, and consistent ABC data collection, every time.</p>
+                <!-- Feature 1: Increase data quality (Acid Lime) -->
+                <div class="bg-primary p-6 pt-8 rounded-lg 
+                            border-2 border-dark-text 
+                            shadow-[4px_4px_0px_#1e1e1e] 
+                            transition-all duration-300 hover:shadow-[6px_6px_0px_#1e1e1e] hover:-translate-y-0.5">
+                    <h3 class="text-xl font-bold font-nohemi mb-3 text-dark-text">Increase Data Quality</h3>
+                    <p class="text-sm text-dark-text">Guided prompts and real-time validation ensure complete, accurate, and consistent ABC data collection, every time.</p>
                 </div>
-                <!-- Feature 2: Simplify the Job -->
-                <div class="bg-dark-bg text-light-text p-6 pt-8 rounded-xl shadow-xl transition-shadow duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold font-nohemi mb-3 text-primary">Simplify the Job</h3>
-                    <!-- Changed text color for better contrast on dark background -->
-                    <p class="text-sm text-gray-400">Designed for instant adoption, the simple, guided process reduces cognitive load and eliminates common frustrations found in complex paperwork.</p>
+                <!-- Feature 2: Simplify the Job (Acid Lime) -->
+                <div class="bg-primary p-6 pt-8 rounded-lg 
+                            border-2 border-dark-text 
+                            shadow-[4px_4px_0px_#1e1e1e] 
+                            transition-all duration-300 hover:shadow-[6px_6px_0px_#1e1e1e] hover:-translate-y-0.5">
+                    <h3 class="text-xl font-bold font-nohemi mb-3 text-dark-text">Simplify the Job</h3>
+                    <p class="text-sm text-dark-text">Designed for instant adoption, the simple, guided process reduces cognitive load and eliminates common frustrations found in complex paperwork.</p>
                 </div>
-                <!-- Feature 3: Give Time Back -->
-                <div class="bg-dark-bg text-light-text p-6 pt-8 rounded-xl shadow-xl transition-shadow duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold font-nohemi mb-3 text-primary">Give Time Back</h3>
-                    <!-- Changed text color for better contrast on dark background -->
-                    <p class="text-sm text-gray-400">Capture complex behaviour data in under 30 seconds, eliminating manual paperwork and freeing up valuable time for care.</p>
+                <!-- Feature 3: Give Time Back (Acid Lime) -->
+                <div class="bg-primary p-6 pt-8 rounded-lg 
+                            border-2 border-dark-text 
+                            shadow-[4px_4px_0px_#1e1e1e] 
+                            transition-all duration-300 hover:shadow-[6px_6px_0px_#1e1e1e] hover:-translate-y-0.5">
+                    <h3 class="text-xl font-bold font-nohemi mb-3 text-dark-text">Give Time Back</h3>
+                    <p class="text-sm text-dark-text">Capture complex behaviour data in under 30 seconds, eliminating manual paperwork and freeing up valuable time for care.</p>
                 </div>
             </div>
         </section>
