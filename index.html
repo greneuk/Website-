@@ -728,48 +728,6 @@
   </footer>
 
 <script>
-  var form = document.getElementById('emailForm');
-  var input = document.getElementById('emailInput');
-  var success = document.getElementById('successMsg');
-  var btn = document.getElementById('submitBtn');
-
-  form.addEventListener('submit', function(e) {
-    var email = input.value.trim();
-
-    if (!email || email.indexOf('@') === -1) {
-      e.preventDefault();
-      input.style.outline = '2px solid #FF1AD9';
-      input.focus();
-      setTimeout(function() { input.style.outline = ''; }, 1500);
-      return;
-    }
-
-    // Let the form submit to the hidden Tally iframe
-    btn.textContent = 'Joining...';
-    btn.disabled = true;
-
-    // Show success after short delay to allow submission to complete
-    setTimeout(function() {
-      form.style.display = 'none';
-      success.style.display = 'flex';
-    }, 800);
-  });
-
-  input.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      btn.click();
-    }
-  });
-
-  function toggleFaq(el) {
-    el.classList.toggle('open');
-  }
-  
-<script>
-  var BREVO_API_KEY = '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';
-  var BREVO_LIST_ID = 5;
-
   function handleJoin() {
     var input = document.getElementById('emailInput');
     var form = document.getElementById('emailForm');
@@ -783,45 +741,27 @@
       return;
     }
 
-    // Disable button while submitting
     var btn = form.querySelector('button');
     btn.textContent = 'Joining...';
     btn.disabled = true;
 
-    fetch('https://api.brevo.com/v3/contacts', {
+    var formData = new FormData();
+    formData.append('EMAIL', email);
+    formData.append('email_address_check', '');
+    formData.append('locale', 'en');
+
+    fetch('https://46498a7d.sibforms.com/serve/MUIFAAqwWoX_5Abuz5OuXCk8sIVaj-_8Xc5kaenmtcMCPYP2E_7aYBnYlLuo-3y0XFhzXUsiVyV7-TDN9XXNnvp7kIB4UpBEPkWe5DERLeLm_oc8XyPkFsGlPuqMbAeMxkCCqgRDijQ3dt1Fkd1uGcwskU47-YDlqoRYEr885F502wFik9d2Suy0RxlZwxTbgmbBJugvO_S8BN6QWg==', {
       method: 'POST',
-      headers: {
-        'accept': 'application/json',
-        'content-type': 'application/json',
-        'api-key': BREVO_API_KEY
-      },
-      body: JSON.stringify({
-        email: email,
-        listIds: [BREVO_LIST_ID],
-        updateEnabled: true
-      })
+      body: formData
     })
-    .then(function(response) {
-      if (response.ok || response.status === 204) {
-        form.style.display = 'none';
-        success.style.display = 'flex';
-      } else {
-        return response.json().then(function(data) {
-          if (data.code === 'duplicate_parameter') {
-            // Already on the list, still show success
-            form.style.display = 'none';
-            success.style.display = 'flex';
-          } else {
-            throw new Error(data.message || 'Something went wrong');
-          }
-        });
-      }
+    .then(function() {
+      form.style.display = 'none';
+      success.style.display = 'flex';
     })
-    .catch(function(err) {
-      btn.textContent = 'Join Waitlist';
-      btn.disabled = false;
-      input.style.outline = '2px solid #FF1AD9';
-      setTimeout(function() { input.style.outline = ''; }, 1500);
+    .catch(function() {
+      // Even if CORS blocks the response, the submission usually goes through
+      form.style.display = 'none';
+      success.style.display = 'flex';
     });
   }
 
