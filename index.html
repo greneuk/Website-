@@ -570,8 +570,6 @@
 </head>
 <body>
 
-  <!-- Hidden iframe for Tally submission -->
-  <iframe id="tallyFrame" name="tallyFrame" class="tally-hidden" tabindex="-1"></iframe>
 
   <!-- Hero -->
   <section class="hero">
@@ -584,16 +582,14 @@
         An inspection can happen tomorrow. Most providers aren't ready. Are you? Grene keeps your evidence up to date so you can always show the care you provide.
       </p>
 
-      <div id="formArea">
-        <form id="emailForm" class="email-row" action="https://tally.so/r/5BdDpZ" method="POST" target="tallyFrame">
-          <input type="email" id="emailInput" name="email" placeholder="Your Email" required>
-          <button type="submit" id="submitBtn">Join Waitlist</button>
-        </form>
+     <div id="emailForm" class="email-row">
+  <input type="email" id="emailInput" placeholder="Your Email">
+  <button type="button" onclick="handleJoin()">Join Waitlist</button>
+</div>
         <div class="success-message" id="successMsg">
           <span class="success-check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>
           You're on the list. We'll be in touch.
         </div>
-      </div>
 
       <div class="social-proof">
         <div class="avatars">
