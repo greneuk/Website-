@@ -59,13 +59,8 @@
     overflow: hidden;
   }
 
-  .hero::before {
-    display: none;
-  }
-
-  .hero::after {
-    display: none;
-  }
+  .hero::before { display: none; }
+  .hero::after { display: none; }
 
   .hero-content {
     position: relative;
@@ -191,6 +186,12 @@
     transform: scale(1.02);
   }
 
+  .email-row button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
   .success-message {
     display: none;
     align-items: center;
@@ -248,8 +249,17 @@
   }
 
   .avatar:first-child { margin-left: 0; }
-  .avatar:nth-child(2) { }
-  .avatar:nth-child(3) { }
+
+  /* Hidden Tally iframe */
+  .tally-hidden {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 
   /* ─── Features ─── */
   .features {
@@ -560,11 +570,13 @@
 </head>
 <body>
 
+  <!-- Hidden iframe for Tally submission -->
+  <iframe id="tallyFrame" name="tallyFrame" class="tally-hidden" tabindex="-1"></iframe>
+
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
       <img src="Grene_Icon_Light Mode_Neutral_V1.png" alt="Grene" class="logo">
-
 
       <h1>Be inspection ready.<br>Every single <span class="italic">day</span></h1>
 
@@ -573,13 +585,13 @@
       </p>
 
       <div id="formArea">
-        <div class="email-row" id="emailForm">
-          <input type="email" id="emailInput" placeholder="Your Email">
-          <button onclick="handleJoin()">Join Waitlist</button>
-        </div>
+        <form id="emailForm" class="email-row" action="https://tally.so/r/5BdDpZ" method="POST" target="tallyFrame">
+          <input type="email" id="emailInput" name="email" placeholder="Your Email" required>
+          <button type="submit" id="submitBtn">Join Waitlist</button>
+        </form>
         <div class="success-message" id="successMsg">
           <span class="success-check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>
-          You're on the list! We'll be in touch.
+          You're on the list. We'll be in touch.
         </div>
       </div>
 
@@ -716,22 +728,38 @@
   </footer>
 
 <script>
-  function handleJoin() {
-    var input = document.getElementById('emailInput');
-    var form = document.getElementById('emailForm');
-    var success = document.getElementById('successMsg');
-    if (input.value && input.value.indexOf('@') > -1) {
-      form.style.display = 'none';
-      success.style.display = 'flex';
-    } else {
+  var form = document.getElementById('emailForm');
+  var input = document.getElementById('emailInput');
+  var success = document.getElementById('successMsg');
+  var btn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', function(e) {
+    var email = input.value.trim();
+
+    if (!email || email.indexOf('@') === -1) {
+      e.preventDefault();
       input.style.outline = '2px solid #FF1AD9';
       input.focus();
       setTimeout(function() { input.style.outline = ''; }, 1500);
+      return;
     }
-  }
 
-  document.getElementById('emailInput').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') handleJoin();
+    // Let the form submit to the hidden Tally iframe
+    btn.textContent = 'Joining...';
+    btn.disabled = true;
+
+    // Show success after short delay to allow submission to complete
+    setTimeout(function() {
+      form.style.display = 'none';
+      success.style.display = 'flex';
+    }, 800);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      btn.click();
+    }
   });
 
   function toggleFaq(el) {
