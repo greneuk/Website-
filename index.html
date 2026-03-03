@@ -139,12 +139,10 @@
     border: 1.5px solid var(--grey-200);
     border-radius: 100px;
     padding: 6px 6px 6px 28px;
-    gap: 0;
+    gap: 8px;
     width: 100%;
     max-width: 460px;
-    transition: border-color 0.25s, box-shadow 0.25s;
-    animation: fadeIn 0.7s 0.24s cubic-bezier(0.16, 1, 0.3, 1) both;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    overflow: hidden;
   }
 
   .email-row:focus-within {
@@ -152,7 +150,7 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
 
-  .email-row input {
+ .email-row input {
     flex: 1;
     border: none;
     outline: none;
@@ -161,7 +159,10 @@
     color: var(--black);
     background: transparent;
     min-width: 0;
-  }
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
   .email-row input::placeholder {
     color: var(--grey-400);
