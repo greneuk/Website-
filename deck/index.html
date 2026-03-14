@@ -3,270 +3,1124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grene Pitch Deck</title>
+<title>Grene — Innovator Founder Visa Application</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,500;1,14..32,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--lime:#D8FF00;--black:#0A0A0A;--card:#141414;--white:#F5F5F3;--grey:#888883;--dim:#525250;--light:#A0A09A}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-snap-type:y mandatory;overflow-y:scroll}
-body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased}
-.slide{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:80px 10vw;position:relative;overflow:hidden}
-.tag{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lime);margin-bottom:32px}
-h1{font-family:'Inter',sans-serif;font-weight:700;letter-spacing:-2.5px;line-height:1.05;color:var(--white)}
-h1.hero{font-size:clamp(42px,5.5vw,72px)}
-h1.title{font-size:clamp(34px,4vw,54px)}
-h1 .lime{color:var(--lime)}
-.sub{font-size:clamp(15px,1.4vw,19px);color:var(--grey);line-height:1.7;max-width:560px;margin-top:20px}
-.bt{font-size:16px;color:var(--grey);line-height:1.7}
-.dt{font-size:14px;color:var(--dim);position:absolute;bottom:48px;left:10vw}
-.cb{position:absolute;bottom:48px;left:10vw;right:10vw;display:flex;justify-content:space-between;align-items:flex-end}
-.ci{font-size:13px;color:var(--light);line-height:1.8}
-.cr{font-size:13px;font-weight:700;color:var(--lime)}
-.lb{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--lime)}
-.lt{position:absolute;top:0;left:0;right:0;height:3px;background:var(--lime)}
-.logo{font-family:'Inter',sans-serif;font-weight:700;font-size:28px;letter-spacing:-1px;color:var(--white);margin-bottom:48px}
-.logo .d{color:var(--lime)}
-.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;margin-top:48px}
-.sn{font-family:'Inter',sans-serif;font-size:clamp(36px,3.5vw,52px);font-weight:700;letter-spacing:-2px;color:var(--lime);line-height:1}
-.sl{font-size:14px;color:var(--grey);margin-top:8px}
-.bs{display:flex;flex-direction:column;gap:36px;margin-top:48px}
-.br{display:flex;align-items:baseline;gap:40px}
-.bn{font-family:'Inter',sans-serif;font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-1.5px;color:var(--lime);min-width:220px}
-.bl{font-size:16px;color:var(--grey)}
-.ag{display:grid;grid-template-columns:1fr 1fr;gap:24px 60px;margin-top:48px}
-.ai{display:flex;align-items:flex-start;gap:14px}
-.ad{width:8px;height:8px;background:var(--lime);border-radius:50%;margin-top:7px;flex-shrink:0}
-.at{font-weight:700;font-size:16px;color:var(--white);margin-bottom:4px}
-.ax{font-size:13px;color:var(--dim)}
-.fl{display:flex;flex-direction:column;gap:14px;margin-top:32px}
-.fi{display:flex;align-items:center;gap:14px;font-size:16px;color:var(--grey)}
-.fd{width:8px;height:8px;background:var(--lime);border-radius:50%;flex-shrink:0}
-.bg{display:grid;grid-template-columns:1fr auto 1fr;gap:16px 32px;margin-top:48px;align-items:center}
-.bh{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding-bottom:12px}
-.bh.bf{color:var(--dim)}.bh.ba{color:var(--lime)}
-.bw{color:var(--dim);font-size:16px}
-.bb{font-size:16px;color:var(--dim);padding:12px 0;border-bottom:1px solid #1A1A1A}
-.bc{font-size:16px;color:var(--white);padding:12px 0;border-bottom:1px solid #1A1A1A}
-.ps{display:flex;flex-direction:column;gap:28px;margin-top:48px}
-.pr{display:flex;align-items:baseline;gap:40px}
-.pt{font-family:'Inter',sans-serif;font-weight:700;font-size:22px;color:var(--lime);min-width:180px;letter-spacing:-.5px}
-.pa{font-size:18px;color:var(--white)}
-.as{display:flex;flex-direction:column;gap:32px;margin-top:48px}
-.ar{display:flex;align-items:baseline;gap:40px}
-.ay{font-family:'Inter',sans-serif;font-weight:700;font-size:32px;color:var(--lime);min-width:80px;letter-spacing:-1px}
-.ao{font-size:18px;color:var(--white);min-width:160px}
-.av{font-size:18px;font-weight:700;color:var(--lime)}
-.gs{display:flex;flex-direction:column;gap:28px;margin-top:48px}
-.gr{display:flex;align-items:baseline;gap:40px}
-.ge{font-weight:700;font-size:18px;color:var(--lime);min-width:120px}
-.gd{font-size:16px;color:var(--grey)}
-.cs{display:flex;flex-direction:column;gap:24px;margin-top:48px}
-.cro{display:flex;align-items:baseline;gap:40px}
-.cn{font-weight:700;font-size:16px;color:var(--grey);min-width:200px}
-.cg{font-size:15px;color:var(--dim)}
-.cp{font-weight:700;font-size:18px;color:var(--lime);margin-top:20px}
-.als{display:flex;flex-direction:column;gap:24px;margin-top:48px}
-.alr{display:flex;align-items:baseline;gap:32px}
-.alp{font-family:'Inter',sans-serif;font-weight:700;font-size:28px;color:var(--lime);min-width:80px;letter-spacing:-1px}
-.ala{font-size:17px;color:var(--white)}
-.bi{font-size:15px;color:var(--grey);margin-top:20px}
-.fn{font-family:'Inter',sans-serif;font-weight:700;font-size:22px;color:var(--white);margin-top:48px}
-.fr{font-size:15px;color:var(--grey);margin-top:6px}
-.cls{text-align:center;align-items:center}
-.cl{font-family:'Inter',sans-serif;font-weight:700;font-size:clamp(48px,6vw,72px);letter-spacing:-3px;color:var(--white)}
-.cl .d{color:var(--lime)}
-.ct{font-size:20px;color:var(--grey);margin-top:16px}
-.ce{font-size:16px;color:var(--white);margin-top:48px}
-.nav{position:fixed;right:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:100}
-.nd{width:6px;height:6px;border-radius:50%;background:var(--dim);cursor:pointer;transition:all .3s}
-.nd.active{background:var(--lime);transform:scale(1.4)}
-@media(max-width:768px){.slide{padding:60px 6vw}.ag{grid-template-columns:1fr}.bg{grid-template-columns:1fr;gap:8px}.bw,.bh{display:none}.br{flex-direction:column;gap:4px}.bn{min-width:auto}.dt{left:6vw}.cb{left:6vw;right:6vw;flex-direction:column;align-items:flex-start;gap:8px}}
-@media print{html{scroll-snap-type:none}.slide{page-break-after:always;min-height:100vh}.nav{display:none}}
+  :root {
+    --lime: #D8FF00;
+    --black: #0A0A0A;
+    --white: #F5F5F0;
+    --grey: #1C1C1C;
+    --mid: #2A2A2A;
+    --muted: #888;
+    --font: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--black);
+    font-family: var(--font);
+    overflow: hidden;
+    color: var(--white);
+  }
+
+  .deck {
+    width: 100vw; height: 100vh;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 80px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+
+  .slide.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* Backgrounds */
+  .bg-black { background: var(--black); }
+  .bg-lime { background: var(--lime); }
+  .bg-grey { background: var(--grey); }
+
+  /* Typography */
+  .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+  .bg-lime .label { color: #5A6600; }
+
+  .headline {
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    max-width: 820px;
+  }
+
+  .headline-xl {
+    font-size: clamp(48px, 7vw, 86px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+
+  .subhead {
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 680px;
+    margin-top: 20px;
+  }
+  .bg-lime .subhead { color: #4A5500; }
+
+  .lime { color: var(--lime); }
+  .black-text { color: var(--black); }
+  .muted { color: var(--muted); }
+
+  /* Nav */
+  .nav {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 100;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 40px;
+    padding: 10px 20px;
+  }
+
+  .nav button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 18px;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+  .nav button:hover { color: var(--lime); background: rgba(216,255,0,0.08); }
+
+  .nav-counter {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    min-width: 52px;
+    text-align: center;
+  }
+
+  .dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--muted);
+    opacity: 0.3;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .dot.active { background: var(--lime); opacity: 1; width: 18px; border-radius: 3px; }
+
+  /* Logo */
+  .logo {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+  }
+  .logo .dot-logo { color: var(--lime); }
+
+  /* Cover */
+  .cover-top { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 40px; }
+  .cover-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .cover-meta-item { font-size: 13px; color: var(--muted); }
+  .cover-meta-item strong { color: var(--white); display: block; margin-bottom: 2px; }
+
+  /* Tag */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(216,255,0,0.3);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 32px;
+  }
+  .tag::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--lime); }
+
+  /* Two-col */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    flex: 1;
+    align-items: start;
+    margin-top: 40px;
+  }
+
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    flex: 1;
+    align-items: start;
+    margin-top: 40px;
+  }
+
+  /* Stat block */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .stat {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 28px 24px;
+  }
+
+  .stat-num {
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--lime);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+    font-family: var(--mono);
+  }
+
+  /* List */
+  .list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+  .list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(245,245,240,0.8);
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .list li:last-child { border-bottom: none; }
+  .list-marker {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--lime);
+    margin-top: 4px;
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+  }
+
+  /* Before/after table */
+  .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    gap: 0;
+    margin-top: 36px;
+    flex: 1;
+  }
+  .ba-col { display: flex; flex-direction: column; gap: 1px; }
+  .ba-header {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    margin-bottom: 2px;
+  }
+  .ba-before-hdr { background: rgba(255,255,255,0.04); color: var(--muted); }
+  .ba-after-hdr { background: rgba(216,255,0,0.12); color: var(--lime); }
+  .ba-cell {
+    padding: 14px 20px;
+    font-size: 13px;
+    line-height: 1.4;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .ba-before { background: rgba(255,255,255,0.03); color: rgba(245,245,240,0.5); text-decoration: line-through; text-decoration-color: rgba(255,255,255,0.15); }
+  .ba-after { background: rgba(216,255,0,0.06); color: var(--white); }
+  .ba-arrow { display: flex; align-items: center; justify-content: center; color: var(--lime); font-size: 16px; }
+
+  /* Timeline */
+  .timeline { margin-top: 36px; display: flex; flex-direction: column; gap: 0; flex: 1; }
+  .tl-item {
+    display: grid;
+    grid-template-columns: 120px 1px 1fr;
+    gap: 0 24px;
+    position: relative;
+  }
+  .tl-year {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--lime);
+    padding: 16px 0;
+    text-align: right;
+  }
+  .tl-line {
+    background: rgba(216,255,0,0.2);
+    position: relative;
+  }
+  .tl-line::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--lime);
+  }
+  .tl-content { padding: 14px 0 14px 0; }
+  .tl-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .tl-desc { font-size: 12px; color: var(--muted); }
+  .tl-arr { font-family: var(--mono); font-size: 11px; color: var(--lime); margin-top: 2px; }
+
+  /* Criteria badge */
+  .criteria {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .criterion {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--muted);
+  }
+  .criterion.active {
+    border-color: var(--lime);
+    color: var(--lime);
+    background: rgba(216,255,0,0.06);
+  }
+
+  /* Person card */
+  .person {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 28px;
+  }
+  .person-name { font-size: 18px; font-weight: 700; margin-bottom: 2px; }
+  .person-title { font-size: 12px; color: var(--lime); font-family: var(--mono); margin-bottom: 16px; }
+  .person-creds { display: flex; flex-direction: column; gap: 8px; }
+  .person-cred { font-size: 13px; color: rgba(245,245,240,0.7); line-height: 1.4; display: flex; gap: 10px; }
+  .person-cred::before { content: '/'; color: var(--lime); font-family: var(--mono); flex-shrink: 0; }
+
+  /* Job table */
+  .job-table { margin-top: 36px; flex: 1; display: flex; flex-direction: column; gap: 2px; }
+  .job-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 120px;
+    gap: 1px;
+  }
+  .job-hdr .job-cell { background: rgba(216,255,0,0.08); font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--lime); }
+  .job-cell { padding: 12px 16px; font-size: 13px; background: rgba(255,255,255,0.03); }
+  .job-cell.year { font-family: var(--mono); font-size: 11px; color: var(--lime); }
+
+  /* Pricing */
+  .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 36px; }
+  .price-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 24px 20px;
+  }
+  .price-card.featured { border-color: var(--lime); background: rgba(216,255,0,0.04); }
+  .price-tier { font-family: var(--mono); font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+  .price-num { font-size: 32px; font-weight: 700; color: var(--lime); letter-spacing: -0.03em; }
+  .price-unit { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .price-sites { font-size: 12px; color: rgba(245,245,240,0.6); margin-top: 12px; }
+
+  /* ARR row */
+  .arr-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .arr-card {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .arr-year { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 10px; }
+  .arr-val { font-size: 26px; font-weight: 700; color: var(--lime); letter-spacing: -0.03em; }
+  .arr-groups { font-size: 11px; color: var(--muted); margin-top: 6px; }
+
+  /* Slide header */
+  .slide-header { margin-bottom: 8px; }
+
+  /* Criterion tag in header */
+  .criterion-inline {
+    display: inline-flex;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid var(--lime);
+    color: var(--lime);
+    margin-left: 12px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+  }
+
+  /* IP box */
+  .ip-box {
+    border: 1px solid rgba(216,255,0,0.25);
+    border-radius: 8px;
+    padding: 28px 32px;
+    background: rgba(216,255,0,0.04);
+    margin-top: 32px;
+  }
+  .ip-title { font-size: 13px; font-weight: 600; color: var(--lime); margin-bottom: 8px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em; }
+  .ip-body { font-size: 14px; color: rgba(245,245,240,0.8); line-height: 1.6; }
+
+  /* Moat */
+  .moat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; flex: 1; }
+  .moat-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .moat-title { font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--lime); }
+  .moat-body { font-size: 13px; color: rgba(245,245,240,0.7); line-height: 1.5; }
+
+  /* Progress bar */
+  .trl-bar {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .trl-step {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .trl-step.filled { background: var(--lime); }
+  .trl-step.current { background: var(--lime); }
+  .trl-step:first-child { border-radius: 3px 0 0 3px; }
+  .trl-step:last-child { border-radius: 0 3px 3px 0; }
+  .trl-labels { display: flex; justify-content: space-between; margin-top: 8px; }
+  .trl-label { font-family: var(--mono); font-size: 9px; color: var(--muted); }
+  .trl-label.active { color: var(--lime); }
+
+  /* Landscape */
+  .landscape { display: grid; grid-template-columns: 1fr 1fr 1fr 1.2fr; gap: 16px; margin-top: 36px; flex: 1; }
+  .landscape-col { display: flex; flex-direction: column; gap: 2px; }
+  .landscape-hdr {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 10px 14px;
+    border-radius: 4px 4px 0 0;
+  }
+  .landscape-cell { font-size: 12px; padding: 10px 14px; background: rgba(255,255,255,0.03); color: rgba(245,245,240,0.6); line-height: 1.4; flex: 1; }
+  .landscape-hdr.grene-hdr { background: rgba(216,255,0,0.15); color: var(--lime); }
+  .landscape-hdr.other-hdr { background: rgba(255,255,255,0.04); color: var(--muted); }
+  .landscape-cell.grene-cell { background: rgba(216,255,0,0.05); color: var(--white); font-weight: 500; }
+  .check { color: var(--lime); }
+  .cross { color: rgba(255,255,255,0.2); }
+
+  /* Ask */
+  .ask-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; flex: 1; }
+  .ask-block { border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 32px; }
+  .ask-block.featured { border-color: var(--lime); background: rgba(216,255,0,0.04); }
+  .ask-title { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--lime); margin-bottom: 16px; }
+  .ask-num { font-size: 42px; font-weight: 700; color: var(--lime); letter-spacing: -0.04em; margin-bottom: 4px; }
+  .ask-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .ask-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .ask-list li { font-size: 13px; color: rgba(245,245,240,0.7); display: flex; gap: 10px; }
+  .ask-list li::before { content: '/'; color: var(--lime); font-family: var(--mono); flex-shrink: 0; }
+
+  /* Traction */
+  .traction-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 36px; }
+  .traction-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .traction-cat { font-family: var(--mono); font-size: 9px; color: var(--lime); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 14px; }
+  .traction-item { font-size: 13px; color: rgba(245,245,240,0.75); padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.4; }
+  .traction-item:last-child { border-bottom: none; }
+
+  /* Intl */
+  .intl-map { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 36px; }
+  .market-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .market-phase { font-family: var(--mono); font-size: 9px; color: var(--lime); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px; }
+  .market-name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .market-detail { font-size: 12px; color: var(--muted); line-height: 1.4; }
+
 </style>
 </head>
 <body>
-<div class="nav" id="nav"></div>
+<div class="deck" id="deck">
 
-<section class="slide" id="s1">
-<img src="decklogo.png" alt="Grene" style="height:64px;width:auto;margin-bottom:48px;align-self:flex-start">
-<h1 class="hero">Compliance backbone<br>for social care.</h1>
-<p class="sub">Always inspection-ready. Invisible to your team.</p>
-<div class="cb"><div><div class="ci">Naomi Owolabi &middot; Founder &amp; CEO &middot; naomi@grene.co.uk</div><div class="cr">Pre-Seed &middot; &pound;250,000</div></div></div>
-<div class="lb"></div>
-</section>
+  <!-- 01. COVER -->
+  <div class="slide bg-black active">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+      <img src="https://grene.co.uk/decklogo.png" height="48" style="width:auto;" alt="Grene">
+      <div class="tag">Innovator Founder Visa · Envestors Endorsement</div>
+    </div>
+    <div class="cover-top">
+      <div style="font-family:var(--mono); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:20px;">Adult social care compliance</div>
+      <div class="headline-xl">Compliance backbone<br>for social care.</div>
+      <p class="subhead">The first platform that converts care operations into continuous, regulator-mapped compliance evidence. Starting in England. Built for every regulated care market.</p>
+      <div class="cover-meta">
+        <div class="cover-meta-item"><strong>Naomi Owolabi</strong>Founder and CEO</div>
+        <div class="cover-meta-item"><strong>Josteve Adekanbi</strong>Engineering Co-founder</div>
+        <div class="cover-meta-item"><strong>Status</strong>MVP in development</div>
+        <div class="cover-meta-item"><strong>Contact</strong>naomi@grene.co.uk</div>
+      </div>
+    </div>
+  </div>
 
-<section class="slide" id="s2">
-<div class="tag">The Problem</div>
-<h1 class="title">Social care has care systems.<br><span class="lime">It has no compliance backbone.</span></h1>
-<p class="sub" style="margin-top:32px">30K CQC sites use care records, HR tools, and spreadsheets. None deliver continuous, regulator-mapped compliance across sites.</p>
-<p class="bt" style="margin-top:24px;color:var(--white)">Grene is the first platform built for that job.</p>
-</section>
+  <!-- 02. THE PROBLEM -->
+  <div class="slide bg-black">
+    <div class="label">The Problem</div>
+    <div class="criteria">
+      <span class="criterion active">Innovation</span>
+      <span class="criterion">Viability</span>
+      <span class="criterion">Scalability</span>
+    </div>
+    <div class="headline">Social care has care systems.<br>It has no compliance backbone.</div>
+    <div class="two-col" style="margin-top:36px;">
+      <div>
+        <ul class="list">
+          <li><span class="list-marker">01</span><div><strong>~40,000 CQC-regulated sites</strong> operate across England using a mix of care records, HR tools, and spreadsheets. None map daily operations to the regulator's framework automatically.</div></li>
+          <li><span class="list-marker">02</span><div><strong>Registered managers spend 30 to 50% of their time on compliance admin.</strong> Inspection prep alone consumes 2 to 6 weeks of management capacity per site.</div></li>
+          <li><span class="list-marker">03</span><div><strong>CQC's Single Assessment Framework</strong> requires continuous evidence across 34 quality statements. No existing platform does this mapping.</div></li>
+        </ul>
+      </div>
+      <div>
+        <div style="border:1px solid rgba(255,255,255,0.06); border-radius:8px; padding:28px; margin-bottom:16px;">
+          <div style="font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Manager reality</div>
+          <div style="font-size:22px; font-weight:700; color:var(--lime); letter-spacing:-0.02em; margin-bottom:8px;">"Are we inspection-ready today?"</div>
+          <div style="font-size:13px; color:rgba(245,245,240,0.6); line-height:1.5;">No registered manager in England can answer this question confidently without weeks of manual preparation. That is the problem Grene solves.</div>
+        </div>
+        <div class="stat-grid" style="grid-template-columns:1fr 1fr; gap:12px; margin-top:0;">
+          <div class="stat"><div class="stat-num">2-6wk</div><div class="stat-label">Manager time per inspection</div></div>
+          <div class="stat"><div class="stat-num">£20K</div><div class="stat-label">Compliance consultant cost per engagement</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<section class="slide" id="s3">
-<div class="tag">Market</div>
-<h1 class="title">England's adult social care.</h1>
-<div class="sr">
-<div><div class="sn">&pound;77.8B</div><div class="sl">economic contribution</div></div>
-<div><div class="sn">1.6M</div><div class="sl">people employed</div></div>
-<div><div class="sn">30K</div><div class="sl">CQC-regulated sites</div></div>
-<div><div class="sn">19K</div><div class="sl">organisations</div></div>
+  <!-- 03. MARKET -->
+  <div class="slide bg-black">
+    <div class="label">Market Opportunity</div>
+    <div class="criteria">
+      <span class="criterion">Innovation</span>
+      <span class="criterion active">Viability</span>
+      <span class="criterion active">Scalability</span>
+    </div>
+    <div class="headline">England's adult social care.<br><span class="lime">A £77.8B sector.</span></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-num">£77.8B</div><div class="stat-label">Sector economic contribution</div></div>
+      <div class="stat"><div class="stat-num">40K</div><div class="stat-label">CQC-regulated sites</div></div>
+      <div class="stat"><div class="stat-num">17K</div><div class="stat-label">Provider organisations</div></div>
+      <div class="stat"><div class="stat-num">1.6M</div><div class="stat-label">Workforce</div></div>
+    </div>
+    <div class="two-col" style="margin-top:32px;">
+      <div>
+        <div style="font-size:13px; color:var(--muted); margin-bottom:12px; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.1em;">English market (base case)</div>
+        <div style="font-size:36px; font-weight:700; color:var(--lime); letter-spacing:-0.03em;">£120M+</div>
+        <div style="font-size:13px; color:var(--muted); margin-top:6px;">Annual revenue opportunity across all CQC-regulated sites at blended £250 per site per month</div>
+        <div style="margin-top:16px; font-size:13px; color:rgba(245,245,240,0.7);">At 30% penetration over 10 years: <strong style="color:var(--lime);">£36M ARR</strong> in England alone.</div>
+      </div>
+      <div>
+        <div style="font-size:13px; color:var(--muted); margin-bottom:12px; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.1em;">Addressable now</div>
+        <div style="font-size:36px; font-weight:700; color:var(--lime); letter-spacing:-0.03em;">3,000+</div>
+        <div style="font-size:13px; color:var(--muted); margin-top:6px;">Multi-site provider groups — Grene's natural first customers. Not creating new budget. Redirecting existing spend on compliance consultants and manager time.</div>
+        <div style="margin-top:16px; font-size:13px; color:rgba(245,245,240,0.7);">Fewer than 1% of provider organisations needed to reach £5.4M ARR by Year 3.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04. SOLUTION -->
+  <div class="slide bg-black">
+    <div class="label">The Solution</div>
+    <div class="criteria">
+      <span class="criterion active">Innovation</span>
+      <span class="criterion active">Viability</span>
+      <span class="criterion">Scalability</span>
+    </div>
+    <div class="headline">Existing systems tell you what to do.<br><span class="lime">Grene does it for you.</span></div>
+    <div class="ba-grid" style="margin-top:36px;">
+      <div class="ba-col">
+        <div class="ba-header ba-before-hdr">Without Grene</div>
+        <div class="ba-cell ba-before">Manager spends weeks chasing DBS, training, and supervision records before inspection</div>
+        <div class="ba-cell ba-before">Compliance evidence scattered across files, spreadsheets, and email chains</div>
+        <div class="ba-cell ba-before">No live view of risk across multiple sites</div>
+        <div class="ba-cell ba-before">CQC inspection creates a crisis, not a review</div>
+        <div class="ba-cell ba-before">Provider pays £5,000 to £20,000 for a consultant to prepare</div>
+      </div>
+      <div class="ba-col" style="justify-content:center;">
+        <div class="ba-header" style="background:none; color:transparent;">arr</div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-arrow">→</div>
+      </div>
+      <div class="ba-col">
+        <div class="ba-header ba-after-hdr">With Grene</div>
+        <div class="ba-cell ba-after">Compliance status updated continuously as operations happen. Manager opens the app. Evidence is there.</div>
+        <div class="ba-cell ba-after">Records automatically categorised and mapped to CQC SAF domains in real time</div>
+        <div class="ba-cell ba-after">Live readiness dashboard across all sites. Issues flagged before they escalate.</div>
+        <div class="ba-cell ba-after">Default state is inspection-ready. The inspection is just a confirmation.</div>
+        <div class="ba-cell ba-after">Subscription replaces one-off consultant spend. Better outcome at a fraction of the cost.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05. INNOVATION -->
+  <div class="slide bg-black">
+    <div class="label">The Innovation</div>
+    <div class="criteria">
+      <span class="criterion active">Innovation</span>
+      <span class="criterion">Viability</span>
+      <span class="criterion">Scalability</span>
+    </div>
+    <div class="headline">The CQC SAF mapping layer.<br><span class="lime">Built on lived operational knowledge.</span></div>
+    <div class="two-col" style="margin-top:32px;">
+      <div>
+        <ul class="list">
+          <li><span class="list-marker">Core</span><div>An AI-driven engine that automatically categorises care records, incidents, training logs, and supervision notes against CQC's 34 quality statements across 5 regulatory domains (Safe, Effective, Caring, Responsive, Well-led).</div></li>
+          <li><span class="list-marker">USP</span><div>The mapping logic is not generic AI. It encodes domain knowledge from years of operating inside CQC-regulated services. No competitor has built this from the inside out.</div></li>
+          <li><span class="list-marker">Timing</span><div>CQC's Single Assessment Framework final guidance is expected summer 2026. Grene's mapping layer is designed to update per guidance cycle, creating a continuous differentiation advantage.</div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ip-box">
+          <div class="ip-title">IP Strategy</div>
+          <div class="ip-body">The protectable core is the SAF mapping layer: the proprietary logic that translates unstructured care operations data into structured, regulator-mapped compliance evidence. Grene is exploring copyright protection for the mapping schema and trade secret protection for the training methodology. As inspection outcome data accumulates across pilot customers, the dataset itself becomes a durable competitive asset.</div>
+        </div>
+        <div style="margin-top:20px;">
+          <div style="font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:12px;">Technology Readiness Level</div>
+          <div class="trl-bar">
+            <div class="trl-step filled"></div>
+            <div class="trl-step filled"></div>
+            <div class="trl-step filled"></div>
+            <div class="trl-step current"></div>
+            <div class="trl-step"></div>
+            <div class="trl-step"></div>
+            <div class="trl-step"></div>
+            <div class="trl-step"></div>
+            <div class="trl-step"></div>
+          </div>
+          <div class="trl-labels">
+            <span class="trl-label">TRL 1<br>Concept</span>
+            <span class="trl-label active" style="text-align:center;">TRL 4 ← Grene now<br>Prototype validated</span>
+            <span class="trl-label" style="text-align:right;">TRL 9<br>Deployed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06. WHY IT CAN'T BE REPLICATED -->
+  <div class="slide bg-black">
+    <div class="label">Competitive Moat</div>
+    <div class="criteria">
+      <span class="criterion active">Innovation</span>
+      <span class="criterion">Viability</span>
+      <span class="criterion">Scalability</span>
+    </div>
+    <div class="headline">Why this is hard to replicate.</div>
+    <div class="moat-grid">
+      <div class="moat-card">
+        <div class="moat-title">Domain knowledge, not just technology</div>
+        <div class="moat-body">The CQC SAF mapping logic was built by someone who has managed compliance across multiple regulated settings. A well-funded competitor could build the infrastructure. They would be guessing at the mapping logic. Grene is not.</div>
+      </div>
+      <div class="moat-card">
+        <div class="moat-title">Inspection outcome data as a moat</div>
+        <div class="moat-body">As Grene accumulates real inspection outcomes from pilot customers, the mapping layer improves in ways no competitor can replicate without the same data. First-mover advantage compounds over time.</div>
+      </div>
+      <div class="moat-card">
+        <div class="moat-title">Evidence history creates lock-in</div>
+        <div class="moat-body">Once a provider's compliance evidence history lives in Grene, switching means losing years of audit trail. The longer a customer stays, the higher the switching cost. Churn is structurally low.</div>
+      </div>
+      <div class="moat-card">
+        <div class="moat-title">Regulatory update cycle as a service</div>
+        <div class="moat-body">The CQC SAF framework updates. Every update is a retention event for Grene customers and a barrier for new entrants who must rebuild their mapping from scratch. Grene updates the layer for all customers simultaneously.</div>
+      </div>
+    </div>
+    <div class="landscape" style="margin-top:20px; flex:0;">
+      <div class="landscape-col">
+        <div class="landscape-hdr other-hdr">Competitors</div>
+        <div class="landscape-cell">Care management platforms (Nourish, Birdie)</div>
+        <div class="landscape-cell">HR and training tools</div>
+        <div class="landscape-cell">Compliance consultants</div>
+        <div class="landscape-cell">Spreadsheets</div>
+      </div>
+      <div class="landscape-col">
+        <div class="landscape-hdr other-hdr">SAF mapping</div>
+        <div class="landscape-cell"><span class="cross">None</span></div>
+        <div class="landscape-cell"><span class="cross">None</span></div>
+        <div class="landscape-cell"><span class="cross">None</span></div>
+        <div class="landscape-cell"><span class="cross">None</span></div>
+      </div>
+      <div class="landscape-col">
+        <div class="landscape-hdr other-hdr">Continuous evidence</div>
+        <div class="landscape-cell"><span class="cross">No</span></div>
+        <div class="landscape-cell"><span class="cross">No</span></div>
+        <div class="landscape-cell"><span class="cross">One-off</span></div>
+        <div class="landscape-cell"><span class="cross">Manual</span></div>
+      </div>
+      <div class="landscape-col">
+        <div class="landscape-hdr grene-hdr">Grene</div>
+        <div class="landscape-cell grene-cell"><span class="check">34 quality statements</span></div>
+        <div class="landscape-cell grene-cell"><span class="check">Real time, always on</span></div>
+        <div class="landscape-cell grene-cell"><span class="check">Subscription, not one-off</span></div>
+        <div class="landscape-cell grene-cell"><span class="check">Built for scale</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07. FOUNDING TEAM -->
+  <div class="slide bg-black">
+    <div class="label">The Founding Team</div>
+    <div class="criteria">
+      <span class="criterion">Innovation</span>
+      <span class="criterion active">Viability</span>
+      <span class="criterion">Scalability</span>
+    </div>
+    <div class="headline">The innovation is built from the inside. <span class="lime">Not outsourced.</span></div>
+    <div class="two-col" style="margin-top:36px;">
+      <div class="person">
+        <div class="person-name">Naomi Owolabi</div>
+        <div class="person-title">Founder and CEO</div>
+        <div class="person-creds">
+          <div class="person-cred">Trained product designer with direct experience designing for high-stakes operational environments</div>
+          <div class="person-cred">PBS (Positive Behaviour Support) practice leader. Deep clinical and regulatory knowledge of the LD and social care sector</div>
+          <div class="person-cred">Deputised as registered manager across multiple CQC-regulated settings. Lived the compliance problem firsthand</div>
+          <div class="person-cred">Currently embedded with a CQC Outstanding-rated social care charity. Maintains active CQC currency</div>
+          <div class="person-cred">One Health Tech Fellow. Co-leads Better HealthTech by Design network</div>
+          <div class="person-cred">Mentored by Daniel Burka, former Design Partner at Google Ventures. Operates from Hard Problems, London</div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="person-name">Josteve Adekanbi</div>
+        <div class="person-title">Engineering Co-founder</div>
+        <div class="person-creds">
+          <div class="person-cred">Background in NHS regulation and digital health infrastructure</div>
+          <div class="person-cred">Owns Grene's compliance architecture, security infrastructure, and certification pathway</div>
+          <div class="person-cred">Leads DSPT (Data Security and Protection Toolkit) certification in Year 1</div>
+          <div class="person-cred">ISO 27001 accreditation pathway initiated in Year 1, accredited in Year 2</div>
+          <div class="person-cred">UK GDPR specialist. No external contractor required for information governance</div>
+          <div class="person-cred">Builds the AI mapping layer internally. The core innovation is not outsourced.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:24px; padding:16px 24px; border:1px solid rgba(255,255,255,0.06); border-radius:8px; font-size:13px; color:rgba(245,245,240,0.6);">
+      Advisory: Vik Ivan (AI and data, mental health tech and financial services) · Andy Budd and Devin Hunt, Seedcamp · Office: Hard Problems, London (at no cost)
+    </div>
+  </div>
+
+  <!-- 08. TRACTION -->
+  <div class="slide bg-black">
+    <div class="label">Traction</div>
+    <div class="criteria">
+      <span class="criterion">Innovation</span>
+      <span class="criterion active">Viability</span>
+      <span class="criterion">Scalability</span>
+    </div>
+    <div class="headline">Built. Tested. Validated.</div>
+    <div class="traction-grid">
+      <div class="traction-card">
+        <div class="traction-cat">Product</div>
+        <div class="traction-item">MVP in active development</div>
+        <div class="traction-item">Core compliance mapping architecture defined</div>
+        <div class="traction-item">Interactive prototype built and tested</div>
+        <div class="traction-item">Design system established</div>
+        <div class="traction-item">Landing page live at grene.co.uk</div>
+        <div class="traction-item">Pitch deck live at grene.co.uk/deck</div>
+      </div>
+      <div class="traction-card">
+        <div class="traction-cat">Market validation</div>
+        <div class="traction-item">User research conducted with registered managers</div>
+        <div class="traction-item">Jobs-to-be-done interviews completed</div>
+        <div class="traction-item">End-to-end user journey mapped</div>
+        <div class="traction-item">Problem and solution validated at CQC Outstanding-rated charity</div>
+        <div class="traction-item">Waitlist open at grene.co.uk</div>
+      </div>
+      <div class="traction-card">
+        <div class="traction-cat">Business</div>
+        <div class="traction-item">Both co-founders secured</div>
+        <div class="traction-item">Free desk secured at Hard Problems, London</div>
+        <div class="traction-item">Company formation underway</div>
+        <div class="traction-item">Letters of Intent from provider groups</div>
+        <div class="traction-item">Year 1 fully bootstrapped (£8,500 tools and legal)</div>
+      </div>
+    </div>
+    <div style="margin-top:20px; padding:20px 24px; border:1px solid rgba(216,255,0,0.15); border-radius:8px; background:rgba(216,255,0,0.03); font-size:13px; color:rgba(245,245,240,0.7); line-height:1.5;">
+      Naomi acts as sector advisor in Year 1, maintaining active CQC framework currency and direct provider relationships while building the product. No separation between founder and market.
+    </div>
+  </div>
+
+  <!-- 09. BUSINESS MODEL -->
+  <div class="slide bg-black">
+    <div class="label">Business Model</div>
+    <div class="criteria">
+      <span class="criterion">Innovation</span>
+      <span class="criterion active">Viability</span>
+      <span class="criterion">Scalability</span>
+    </div>
+    <div class="headline">Subscription SaaS. <span class="lime">Mandatory spend redirected.</span></div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Single site</div>
+        <div class="price-num">£500</div>
+        <div class="price-unit">per site / month</div>
+        <div class="price-sites">1 site<br>£6,000 / year</div>
+      </div>
+      <div class="price-card featured">
+        <div class="price-tier">Small group</div>
+        <div class="price-num">£350</div>
+        <div class="price-unit">per site / month</div>
+        <div class="price-sites">2 to 9 sites<br>£4,200 / site / year</div>
+      </div>
+      <div class="price-card featured">
+        <div class="price-tier">Mid group</div>
+        <div class="price-num">£250</div>
+        <div class="price-unit">per site / month</div>
+        <div class="price-sites">10 to 24 sites<br>£3,000 / site / year</div>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Enterprise</div>
+        <div class="price-num">£150</div>
+        <div class="price-unit">per site / month</div>
+        <div class="price-sites">25+ sites<br>£1,800 / site / year</div>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top:24px; flex:0;">
+      <div style="border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:20px 24px;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Blended average</div>
+        <div style="font-size:32px; font-weight:700; color:var(--lime); letter-spacing:-0.03em;">£250 <span style="font-size:16px; font-weight:400; color:var(--muted);">per site / month</span></div>
+        <div style="font-size:13px; color:rgba(245,245,240,0.6); margin-top:6px;">Across the full portfolio. Replaces £5,000 to £20,000 per consultant engagement.</div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:20px 24px;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Buyer and champion</div>
+        <div style="font-size:15px; color:var(--white); margin-bottom:6px;"><strong>Buyer:</strong> Operations directors. Own the compliance risk.</div>
+        <div style="font-size:15px; color:var(--white); margin-bottom:6px;"><strong>Champion:</strong> Registered managers. Live the pain daily.</div>
+        <div style="font-size:13px; color:rgba(245,245,240,0.6); margin-top:4px;">Break-even: 8 to 10 provider groups. Achievable within 12 months of commercial launch.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. FINANCIAL PLAN -->
+  <div class="slide bg-black">
+    <div class="label">Financial Plan</div>
+    <div class="criteria">
+      <span class="criterion">Innovation</span>
+      <span class="criterion active">Viability</span>
+      <span class="criterion active">Scalability</span>
+    </div>
+    <div class="headline">Capital-efficient. <span class="lime">Bottom-up projections.</span></div>
+    <div class="arr-row">
+      <div class="arr-card">
+        <div class="arr-year">Year 1 · 2026-27</div>
+        <div class="arr-val">£360K</div>
+        <div class="arr-groups">10 provider groups · ~80 sites</div>
+        <div style="font-size:11px; color:var(--lime); margin-top:6px; font-family:var(--mono);">Bootstrapped</div>
+      </div>
+      <div class="arr-card" style="border-color:rgba(216,255,0,0.2);">
+        <div class="arr-year">Year 2 · 2027-28</div>
+        <div class="arr-val">£1.8M</div>
+        <div class="arr-groups">50 provider groups · ~400 sites</div>
+        <div style="font-size:11px; color:var(--lime); margin-top:6px; font-family:var(--mono);">Team hired · CSM + Sales</div>
+      </div>
+      <div class="arr-card" style="border-color:rgba(216,255,0,0.3); background:rgba(216,255,0,0.03);">
+        <div class="arr-year">Year 3 · 2028-29</div>
+        <div class="arr-val">£5.4M</div>
+        <div class="arr-groups">150 provider groups · ~1,200 sites</div>
+        <div style="font-size:11px; color:var(--lime); margin-top:6px; font-family:var(--mono);">Seed round trigger</div>
+      </div>
+      <div class="arr-card">
+        <div class="arr-year">Year 4 · 2029-30</div>
+        <div class="arr-val">£9M</div>
+        <div class="arr-groups">300 provider groups · ~2,400 sites</div>
+      </div>
+      <div class="arr-card">
+        <div class="arr-year">Year 5 · 2030-31</div>
+        <div class="arr-val">£16M+</div>
+        <div class="arr-groups">500 provider groups · ~4,000 sites</div>
+        <div style="font-size:11px; color:var(--lime); margin-top:6px; font-family:var(--mono);">£45M to £90M valuation</div>
+      </div>
+    </div>
+    <div class="two-col" style="flex:0; margin-top:20px;">
+      <div style="border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:20px 24px;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:10px;">Capital efficiency</div>
+        <div style="font-size:13px; color:rgba(245,245,240,0.75); line-height:1.7;">Year 1 is fully bootstrapped. Tools, legal, and cloud costs only — approximately £8,500. No salaries drawn. No external capital required to reach first 10 paying provider groups. The business proves itself before it asks for anything.</div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:20px 24px;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:10px;">Why Year 1 to Year 2 is achievable (5x)</div>
+        <div style="font-size:13px; color:rgba(245,245,240,0.75); line-height:1.7;">Year 1 proves product-market fit with 10 pilots. Pre-seed funds a Customer Success Manager and Sales lead. Those two hires work the warm waitlist. 40 new groups in 12 months is 3 to 4 per month from a two-person team targeting a high-urgency buyer.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. JOB CREATION -->
+  <div class="slide bg-black">
+    <div class="label">Job Creation</div>
+    <div class="criteria">
+      <span class="criterion">Innovation</span>
+      <span class="criterion">Viability</span>
+      <span class="criterion active">Scalability</span>
+    </div>
+    <div class="headline">Building a UK team.<br><span class="lime">Skilled jobs tied to growth.</span></div>
+    <div class="job-table">
+      <div class="job-row job-hdr">
+        <div class="job-cell">Year</div>
+        <div class="job-cell">Role</div>
+        <div class="job-cell">Function</div>
+        <div class="job-cell">Salary range</div>
+      </div>
+      <div class="job-row">
+        <div class="job-cell year">Year 1</div>
+        <div class="job-cell">Naomi Owolabi · Josteve Adekanbi</div>
+        <div class="job-cell">Founding team. Product, compliance architecture, engineering</div>
+        <div class="job-cell" style="color:var(--muted);">No salary drawn</div>
+      </div>
+      <div class="job-row">
+        <div class="job-cell year">Year 2</div>
+        <div class="job-cell">Customer Success Manager</div>
+        <div class="job-cell">Provider onboarding, retention, outcome tracking</div>
+        <div class="job-cell">£35,000 to £40,000</div>
+      </div>
+      <div class="job-row">
+        <div class="job-cell year">Year 2</div>
+        <div class="job-cell">Product Designer</div>
+        <div class="job-cell">Manager and director-facing product design</div>
+        <div class="job-cell">£42,000 to £50,000</div>
+      </div>
+      <div class="job-row">
+        <div class="job-cell year">Year 2</div>
+        <div class="job-cell">Software Engineer</div>
+        <div class="job-cell">Core platform development</div>
+        <div class="job-cell">£45,000 to £55,000</div>
+      </div>
+      <div class="job-row">
+        <div class="job-cell year">Year 3</div>
+        <div class="job-cell">Sales and Growth Lead</div>
+        <div class="job-cell">Provider group acquisition, enterprise pipeline</div>
+        <div class="job-cell">£50,000 to £60,000</div>
+      </div>
+      <div class="job-row">
+        <div class="job-cell year">Year 3</div>
+        <div class="job-cell">Head of Partnerships</div>
+        <div class="job-cell">Sector network, LA and NHS relationships</div>
+        <div class="job-cell">£55,000 to £65,000</div>
+      </div>
+      <div class="job-row">
+        <div class="job-cell year">Year 3</div>
+        <div class="job-cell">Engineer x2 · Customer Success Rep</div>
+        <div class="job-cell">Platform scale and customer base growth</div>
+        <div class="job-cell">£28,000 to £55,000</div>
+      </div>
+    </div>
+    <div style="margin-top:16px; display:flex; gap:24px;">
+      <div style="border:1px solid rgba(255,255,255,0.06); border-radius:6px; padding:14px 20px; font-size:13px;"><span style="color:var(--lime); font-weight:700;">2</span> <span style="color:var(--muted);">founders Year 1</span></div>
+      <div style="border:1px solid rgba(255,255,255,0.06); border-radius:6px; padding:14px 20px; font-size:13px;"><span style="color:var(--lime); font-weight:700;">8 to 12</span> <span style="color:var(--muted);">people by end of Year 2</span></div>
+      <div style="border:1px solid rgba(255,255,255,0.06); border-radius:6px; padding:14px 20px; font-size:13px;"><span style="color:var(--lime); font-weight:700;">20 to 30</span> <span style="color:var(--muted);">people by end of Year 3</span></div>
+      <div style="border:1px solid rgba(255,255,255,0.06); border-radius:6px; padding:14px 20px; font-size:13px; margin-left:auto; border-color:rgba(216,255,0,0.2);"><span style="color:var(--lime); font-weight:700;">All roles</span> <span style="color:var(--muted);">based in the UK</span></div>
+    </div>
+  </div>
+
+  <!-- 12. SCALABILITY -->
+  <div class="slide bg-black">
+    <div class="label">Scalability</div>
+    <div class="criteria">
+      <span class="criterion">Innovation</span>
+      <span class="criterion">Viability</span>
+      <span class="criterion active">Scalability</span>
+    </div>
+    <div class="headline">England first.<br><span class="lime">Every regulated care market.</span></div>
+    <div class="intl-map">
+      <div class="market-card" style="border-color:rgba(216,255,0,0.3); background:rgba(216,255,0,0.03);">
+        <div class="market-phase">Phase 1 · Now</div>
+        <div class="market-name">England (CQC)</div>
+        <div class="market-detail">~40,000 CQC-regulated sites. SAF mapping layer built for this framework. Commercial launch 2026. Base case: £36M ARR at 30% penetration.</div>
+      </div>
+      <div class="market-card">
+        <div class="market-phase">Phase 2 · Year 3</div>
+        <div class="market-name">Scotland, Wales, Northern Ireland</div>
+        <div class="market-detail">Care Inspectorate (Scotland), CIW (Wales), RQIA (Northern Ireland). Mapping layer adapts per regulator. Cautious estimate: £240K ARR Year 3.</div>
+      </div>
+      <div class="market-card">
+        <div class="market-phase">Phase 2 · Year 4</div>
+        <div class="market-name">Republic of Ireland</div>
+        <div class="market-detail">HIQA-regulated social care. Culturally and linguistically close. Similar regulatory structure to CQC. Cautious estimate: £180K ARR Year 4.</div>
+      </div>
+      <div class="market-card">
+        <div class="market-phase">Phase 3 · Year 5</div>
+        <div class="market-name">Australia</div>
+        <div class="market-detail">NDIS and aged care regulation. Significant compliance burden on providers. UK framework knowledge transfers. Cautious estimate: £360K ARR Year 5.</div>
+      </div>
+      <div class="market-card">
+        <div class="market-phase">Phase 3 · Year 5</div>
+        <div class="market-name">Canada</div>
+        <div class="market-detail">Provincial social care regulation. Fragmented but large. Long-term opportunity. Cautious estimate included in Year 5 international upside.</div>
+      </div>
+      <div class="market-card" style="border-color:rgba(255,255,255,0.04); background:rgba(255,255,255,0.01);">
+        <div class="market-phase" style="color:var(--muted);">The mechanism</div>
+        <div class="market-name" style="font-size:14px; color:rgba(245,245,240,0.5);">The mapping layer adapts per regulator.</div>
+        <div class="market-detail">Grene is not a CQC tool. It is a compliance automation platform whose mapping logic is configured per regulatory framework. Each new market is a configuration, not a rebuild.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13. CRITERIA SUMMARY -->
+  <div class="slide bg-black">
+    <div class="label">Summary</div>
+    <div class="headline">Innovative. Viable. Scalable.</div>
+    <div class="three-col" style="margin-top:36px; flex:1;">
+
+      <div style="border:1px solid rgba(216,255,0,0.25); border-radius:8px; padding:32px; background:rgba(216,255,0,0.03); display:flex; flex-direction:column; gap:16px;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--lime); text-transform:uppercase; letter-spacing:0.15em;">Innovative</div>
+        <div style="font-size:16px; font-weight:600; line-height:1.3;">The first platform to map care operations to the CQC Single Assessment Framework automatically.</div>
+        <ul class="ask-list" style="margin-top:8px;">
+          <li>AI-driven SAF mapping layer across 34 quality statements and 5 regulatory domains</li>
+          <li>Built on direct operational knowledge — not replicated from the outside</li>
+          <li>IP strategy defined. Mapping schema and training methodology protectable.</li>
+          <li>Technology Readiness Level 4. Prototype validated with sector users.</li>
+          <li>CQC framework update cycle creates continuous differentiation advantage</li>
+        </ul>
+      </div>
+
+      <div style="border:1px solid rgba(216,255,0,0.25); border-radius:8px; padding:32px; background:rgba(216,255,0,0.03); display:flex; flex-direction:column; gap:16px;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--lime); text-transform:uppercase; letter-spacing:0.15em;">Viable</div>
+        <div style="font-size:16px; font-weight:600; line-height:1.3;">A credible, defensible business model targeting mandatory compliance spend already in the system.</div>
+        <ul class="ask-list" style="margin-top:8px;">
+          <li>Blended £250 per site per month. Replaces £5,000 to £20,000 consultant engagements.</li>
+          <li>Break-even at 8 to 10 provider groups — achievable within Year 1 of commercial launch</li>
+          <li>Year 1 fully bootstrapped. No external capital required to prove the model.</li>
+          <li>Founding team covers design, PBS practice, NHS regulation, DSPT, GDPR, ISO 27001</li>
+          <li>Validated at a CQC Outstanding-rated charity. Problem confirmed. Solution tested.</li>
+        </ul>
+      </div>
+
+      <div style="border:1px solid rgba(216,255,0,0.25); border-radius:8px; padding:32px; background:rgba(216,255,0,0.03); display:flex; flex-direction:column; gap:16px;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--lime); text-transform:uppercase; letter-spacing:0.15em;">Scalable</div>
+        <div style="font-size:16px; font-weight:600; line-height:1.3;">England is the start. Every regulated care market is the destination.</div>
+        <ul class="ask-list" style="margin-top:8px;">
+          <li>~40,000 CQC sites in England. £120M+ annual revenue opportunity. £36M ARR at 30% penetration.</li>
+          <li>Mapping layer adapts per regulator. Scotland, Wales, N. Ireland, RoI, Australia, Canada.</li>
+          <li>UK team grows from 2 founders to 8 to 12 by Year 2 and 20 to 30 by Year 3. All UK-based.</li>
+          <li>ARR trajectory: £360K Year 1 → £1.8M Year 2 → £5.4M Year 3 → £16M+ Year 5</li>
+          <li>Evidence history creates structural lock-in. Switching cost grows with tenure.</li>
+        </ul>
+      </div>
+
+    </div>
+    <div style="margin-top:24px; display:flex; justify-content:space-between; align-items:center; padding:16px 24px; border:1px solid rgba(255,255,255,0.06); border-radius:8px;">
+      <img src="https://grene.co.uk/decklogo.png" height="28" style="width:auto;" alt="Grene">
+      <div style="font-size:13px; color:var(--muted);">naomi@grene.co.uk · grene.co.uk</div>
+    </div>
+  </div>
+
+
 </div>
-<p class="dt">Compliance lives inside this system. Manual. Fragmented. Invisible.</p>
-</section>
 
-<section class="slide" id="s4">
-<div class="tag">Compliance Landscape</div>
-<h1 class="title">6 areas. No single system.</h1>
-<div class="ag">
-<div class="ai"><div class="ad"></div><div><div class="at">Policies</div><div class="ax">Scattered across drives, folders, and email chains</div></div></div>
-<div class="ai"><div class="ad"></div><div><div class="at">DBS Checks</div><div class="ax">Tracked in spreadsheets, manually chased when they expire</div></div></div>
-<div class="ai"><div class="ad"></div><div><div class="at">Training Records</div><div class="ax">Logged as complete but never verified in daily practice</div></div></div>
-<div class="ai"><div class="ad"></div><div><div class="at">Supervisions</div><div class="ax">Paper-based, inconsistently filed, rarely retrievable</div></div></div>
-<div class="ai"><div class="ad"></div><div><div class="at">Incidents</div><div class="ax">No central log, no pattern detection, no learning loop</div></div></div>
-<div class="ai"><div class="ad"></div><div><div class="at">Site Evidence</div><div class="ax">Pulled together in a panic weeks before inspection</div></div></div>
-</div>
-<p class="dt" style="font-style:italic">No live view: &ldquo;Are we inspection-ready today?&rdquo;</p>
-</section>
-
-<section class="slide" id="s5">
-<div class="tag">Cost</div>
-<h1 class="title">Manual compliance = billions<br>in uncontrolled spend.</h1>
-<div class="bs">
-<div class="br"><div class="bn">&pound;31.8B</div><div class="bl">sector wage bill</div></div>
-<div class="br"><div class="bn">&pound;34.5B</div><div class="bl">local authority spend funds compliance</div></div>
-<div class="br"><div class="bn">2&ndash;6 weeks</div><div class="bl">manager time per inspection</div></div>
-<div class="br"><div class="bn">&pound;5&ndash;20K</div><div class="bl">per consultant engagement</div></div>
-</div>
-</section>
-
-<section class="slide" id="s6">
-<div class="tag">Opportunity</div>
-<h1 class="title">Mandatory spend waiting<br>to be productised.</h1>
-<div style="margin-top:48px"><div class="sn" style="font-size:clamp(48px,5vw,72px)">&pound;345M</div><div class="sl" style="font-size:16px;margin-top:12px">annual opportunity (1% of labour and consultancy spend)</div></div>
-<p class="bt" style="margin-top:32px;color:var(--white)">3K multi-site groups = natural first customers.</p>
-<p class="dt">Not creating a new budget. Redirecting existing spend.</p>
-</section>
-
-<section class="slide" id="s7">
-<div class="tag">Solution</div>
-<h1 class="title">Existing systems tell you<br>what to do.</h1>
-<h1 class="title" style="margin-top:16px"><span class="lime">Grene does it for you.</span></h1>
-<div class="fl" style="margin-top:48px">
-<div class="fi"><div class="fd"></div>Auto-tracks DBS, training, and supervision expiry</div>
-<div class="fi"><div class="fd"></div>Live readiness dashboard across all your sites</div>
-<div class="fi"><div class="fd"></div>CQC audit trail retrievable in seconds</div>
-</div>
-<p class="dt">Default state = inspection-ready.</p>
-</section>
-
-<section class="slide" id="s8">
-<div class="tag">Impact</div>
-<h1 class="title">Manual vs. Backbone.</h1>
-<div class="bg">
-<div class="bh bf">Before</div><div class="bh" style="color:transparent">x</div><div class="bh ba">After</div>
-<div class="bb">Manager chases DBS expiry</div><div class="bw">&rarr;</div><div class="bc">Auto-alerts 30 days early</div>
-<div class="bb">Weeks of inspection prep</div><div class="bw">&rarr;</div><div class="bc">Structured evidence ready instantly</div>
-<div class="bb">Blind to site risk</div><div class="bw">&rarr;</div><div class="bc">Live dashboard flags issues</div>
-<div class="bb">Paper and email chaos</div><div class="bw">&rarr;</div><div class="bc">Central audit trail</div>
-<div class="bb">Training logged, never verified</div><div class="bw">&rarr;</div><div class="bc">Competency checked against practice</div>
-</div>
-</section>
-
-<section class="slide" id="s9">
-<div class="tag">Business Model</div>
-<h1 class="title">3K multi-site groups pay us.</h1>
-<p class="bi">Buyer: Ops directors (own the risk) &middot; Champion: Compliance managers (live the pain daily)</p>
-<div class="ps">
-<div class="pr"><div class="pt">1 site</div><div class="pa">&pound;500/mo entry</div></div>
-<div class="pr"><div class="pt">10&ndash;30 sites</div><div class="pa">&pound;8&ndash;24K/year</div></div>
-<div class="pr"><div class="pt">50+ sites</div><div class="pa">&pound;150/site/mo</div></div>
-</div>
-<p class="dt">ACV scales with provider growth.</p>
-</section>
-
-<section class="slide" id="s10">
-<div class="tag">Growth</div>
-<h1 class="title">300 groups = &pound;4.5M ARR.</h1>
-<div class="as">
-<div class="ar"><div class="ay">Y1</div><div class="ao">25 groups</div><div class="av">&pound;250K ARR</div></div>
-<div class="ar"><div class="ay">Y2</div><div class="ao">150 groups</div><div class="av">&pound;1.8M ARR</div></div>
-<div class="ar"><div class="ay">Y3</div><div class="ao">300 groups</div><div class="av">&pound;4.5M ARR</div></div>
-</div>
-<p class="dt">From 19K orgs: &lt;2% market share needed.</p>
-</section>
-
-<section class="slide" id="s11">
-<div class="tag">Go-to-Market</div>
-<h1 class="title">1 site &rarr; entire group.</h1>
-<div class="gs">
-<div class="gr"><div class="ge">Land</div><div class="gd">Prove at 1&ndash;2 services. Quick win.</div></div>
-<div class="gr"><div class="ge">Expand</div><div class="gd">Roll group-wide after CQC success.</div></div>
-<div class="gr"><div class="ge">Deepen</div><div class="gd">Policy and incident analytics.</div></div>
-<div class="gr"><div class="ge">Lock-in</div><div class="gd">Switching = years of evidence history.</div></div>
-</div>
-</section>
-
-<section class="slide" id="s12">
-<div class="tag">Competition</div>
-<h1 class="title">Pieces vs. backbone.</h1>
-<div class="cs">
-<div class="cro"><div class="cn">Care platforms</div><div class="cg">Notes &ne; CQC evidence</div></div>
-<div class="cro"><div class="cn">HR tools</div><div class="cg">Training records &ne; full compliance</div></div>
-<div class="cro"><div class="cn">Consultants</div><div class="cg">&pound;5&ndash;20K one-off fixes &ne; continuous assurance</div></div>
-<div class="cro"><div class="cn">Spreadsheets</div><div class="cg">Proven but unscalable across sites</div></div>
-<div class="cp">Grene: First purpose-built compliance backbone.</div>
-</div>
-</section>
-
-<section class="slide" id="s13">
-<div class="tag">Timing</div>
-<h1 class="title">Manual breaks at scale.</h1>
-<div class="fl" style="margin-top:48px">
-<div class="fi"><div class="fd"></div>CQC demands continuous evidence from 30K sites</div>
-<div class="fi"><div class="fd"></div>1.6M workforce cannot spreadsheet compliance</div>
-<div class="fi"><div class="fd"></div>Sector growing from &pound;77.8B toward &pound;85B+</div>
-<div class="fi"><div class="fd"></div>Providers need infrastructure, not more admin</div>
-</div>
-</section>
-
-<section class="slide" id="s14">
-<div class="tag">Founder</div>
-<h1 class="title">Lived this under CQC.</h1>
-<div class="fl" style="margin-top:48px">
-<div class="fi"><div class="fd"></div>Years managing compliance for complex care services</div>
-<div class="fi"><div class="fd"></div>Trained designer. Builds invisible tools that work.</div>
-<div class="fi"><div class="fd"></div>Understands the &pound;77.8B sector realities firsthand</div>
-</div>
-<div class="fn">Naomi Owolabi</div>
-<div class="fr">Founder &amp; CEO, Grene</div>
-</section>
-
-<section class="slide" id="s15">
-<div class="tag">The Ask</div>
-<h1 class="title">&pound;250K &rarr; 5 paying groups<br>&rarr; Series A.</h1>
-<div class="als">
-<div class="alr"><div class="alp">50%</div><div class="ala">Product hardening</div></div>
-<div class="alr"><div class="alp">30%</div><div class="ala">Customer onboarding</div></div>
-<div class="alr"><div class="alp">20%</div><div class="ala">Operations and legal</div></div>
-</div>
-<p class="dt">Milestones: 5 groups (50 sites), CQC metrics, endorsement.</p>
-</section>
-
-<section class="slide cls" id="s16">
-<div class="lt"></div>
-<img src="decklogo.png" alt="Grene" style="height:64px;width:auto">
-<div class="ct">Compliance backbone for social care.</div>
-<div class="ce">naomi@grene.co.uk</div>
-<div class="lb"></div>
-</section>
+<!-- Navigation -->
+<nav class="nav">
+  <button onclick="prev()" title="Previous">←</button>
+  <div class="dots" id="dots"></div>
+  <span class="nav-counter" id="counter">1 / 13</span>
+  <button onclick="next()" title="Next">→</button>
+</nav>
 
 <script>
-const ss=document.querySelectorAll('.slide'),nv=document.getElementById('nav');
-ss.forEach((s,i)=>{const d=document.createElement('div');d.className='nd';d.onclick=()=>s.scrollIntoView({behavior:'smooth'});nv.appendChild(d)});
-const ds=document.querySelectorAll('.nd');
-new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const i=Array.from(ss).indexOf(en.target);ds.forEach((d,j)=>d.classList.toggle('active',j===i))}})},{threshold:.5}).observe&&ss.forEach(s=>new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const i=Array.from(ss).indexOf(en.target);ds.forEach((d,j)=>d.classList.toggle('active',j===i))}})},{threshold:.5}).observe(s));
-document.addEventListener('keydown',e=>{const a=Array.from(ds).findIndex(d=>d.classList.contains('active'));if(e.key==='ArrowDown'||e.key==='ArrowRight'||e.key===' '){e.preventDefault();if(a<ss.length-1)ss[a+1].scrollIntoView({behavior:'smooth'})}if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();if(a>0)ss[a-1].scrollIntoView({behavior:'smooth'})}});
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+
+  const dotsEl = document.getElementById('dots');
+  const counterEl = document.getElementById('counter');
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dotsEl.children[current].classList.remove('active');
+    current = Math.max(0, Math.min(total - 1, n));
+    slides[current].classList.add('active');
+    dotsEl.children[current].classList.add('active');
+    counterEl.textContent = (current + 1) + ' / ' + total;
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next();
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prev();
+  });
 </script>
 </body>
 </html>
