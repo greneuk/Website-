@@ -42,6 +42,8 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .slide.active {
@@ -156,7 +158,7 @@
   .logo .dot-logo { color: var(--lime); }
 
   /* Cover */
-  .cover-top { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 40px; }
+  .cover-top { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: 20px; }
   .cover-meta {
     display: flex;
     justify-content: space-between;
@@ -164,6 +166,8 @@
     margin-top: 48px;
     padding-top: 32px;
     border-top: 1px solid rgba(255,255,255,0.1);
+    flex-wrap: wrap;
+    gap: 16px;
   }
   .cover-meta-item { font-size: 13px; color: var(--muted); }
   .cover-meta-item strong { color: var(--white); display: block; margin-bottom: 2px; }
@@ -182,8 +186,10 @@
     text-transform: uppercase;
     color: var(--lime);
     margin-bottom: 32px;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
-  .tag::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--lime); }
+  .tag::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--lime); flex-shrink: 0; }
 
   /* Two-col */
   .two-col {
@@ -399,6 +405,67 @@
   /* Slide header */
   .slide-header { margin-bottom: 8px; }
 
+  /* ── RESPONSIVE ─────────────────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .slide { padding: 28px 24px 88px; }
+    .cover-top { justify-content: flex-start; padding-top: 20px; }
+    .cover-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; margin-top: 32px; }
+    .cover-meta-item { min-width: unset; }
+
+    .slide > div:first-child { flex-wrap: wrap; gap: 12px; }
+    .tag { font-size: 8px; letter-spacing: 0.08em; padding: 4px 8px; margin-bottom: 0; }
+
+    .headline-xl { font-size: clamp(28px, 7vw, 52px); }
+    .headline { font-size: clamp(22px, 5vw, 38px); }
+    .subhead { font-size: 15px; }
+
+    .two-col { grid-template-columns: 1fr; gap: 24px; }
+    .three-col { grid-template-columns: 1fr; gap: 16px; }
+
+    .stat-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat-num { font-size: 28px; }
+
+    .ba-grid { grid-template-columns: 1fr; }
+    .ba-col:nth-child(2) { display: none; }
+
+    .pricing-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .arr-row { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .arr-val { font-size: 20px; }
+
+    .moat-grid { grid-template-columns: 1fr; gap: 12px; }
+    .landscape { grid-template-columns: 1fr 1fr; }
+    .traction-grid { grid-template-columns: 1fr; gap: 12px; }
+    .intl-map { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .job-row { grid-template-columns: 60px 1fr; }
+    .job-row .job-cell:nth-child(3),
+    .job-row .job-cell:nth-child(4) { display: none; }
+    .job-hdr .job-cell:nth-child(3),
+    .job-hdr .job-cell:nth-child(4) { display: none; }
+
+    .trl-bar { flex-wrap: wrap; }
+    .person { padding: 20px; }
+    .person-name { font-size: 16px; }
+
+    .nav { bottom: 16px; padding: 8px 14px; gap: 10px; }
+    .dot { width: 4px; height: 4px; }
+    .dot.active { width: 14px; }
+  }
+
+  @media (max-width: 600px) {
+    .slide { padding: 24px 18px 80px; }
+    .headline-xl { font-size: clamp(24px, 8vw, 40px); }
+    .headline { font-size: clamp(18px, 6vw, 28px); }
+    .stat-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .pricing-grid { grid-template-columns: 1fr; gap: 8px; }
+    .arr-row { grid-template-columns: 1fr; gap: 8px; }
+    .landscape { grid-template-columns: 1fr; }
+    .intl-map { grid-template-columns: 1fr; }
+    .logo { font-size: 15px; }
+    .label { font-size: 9px; }
+    .stat-num { font-size: 22px; }
+  }
+
   /* Criterion tag in header */
   .criterion-inline {
     display: inline-flex;
@@ -518,7 +585,7 @@
   <div class="slide bg-black active">
     <div style="display:flex; justify-content:space-between; align-items:flex-start;">
       <img src="decklogo.png" height="48" style="width:auto;" alt="Grene">
-      <div class="tag">Innovator Founder Visa · Envestors Endorsement</div>
+      <div class="tag">Innovator Founder Visa</div>
     </div>
     <div class="cover-top">
       <div style="font-family:var(--mono); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:20px;">Adult social care compliance</div>
@@ -526,7 +593,7 @@
       <p class="subhead">The first platform that converts care operations into continuous, regulator-mapped compliance evidence. Starting in England. Built for every regulated care market.</p>
       <div class="cover-meta">
         <div class="cover-meta-item"><strong>Naomi Owolabi</strong>Founder and CEO</div>
-        <div class="cover-meta-item"><strong>Josteve Adekanbi</strong>Engineering Co-founder</div>
+        <div class="cover-meta-item"><strong>Oluwatoyin Adegoke</strong>Engineering Co-founder</div>
         <div class="cover-meta-item"><strong>Status</strong>MVP in development</div>
         <div class="cover-meta-item"><strong>Contact</strong>naomi@grene.co.uk</div>
       </div>
@@ -759,7 +826,7 @@
         </div>
       </div>
       <div class="person">
-        <div class="person-name">Josteve Adekanbi</div>
+        <div class="person-name">Oluwatoyin Adegoke</div>
         <div class="person-title">Engineering Co-founder</div>
         <div class="person-creds">
           <div class="person-cred">Background in NHS regulation and digital health infrastructure</div>
@@ -937,7 +1004,7 @@
       </div>
       <div class="job-row">
         <div class="job-cell year">Year 1</div>
-        <div class="job-cell">Naomi Owolabi · Josteve Adekanbi</div>
+        <div class="job-cell">Naomi Owolabi · Oluwatoyin Adegoke</div>
         <div class="job-cell">Founding team. Product, compliance architecture, engineering</div>
         <div class="job-cell" style="color:var(--muted);">No salary drawn</div>
       </div>
@@ -1073,11 +1140,59 @@
 
     </div>
     <div style="margin-top:24px; display:flex; justify-content:space-between; align-items:center; padding:16px 24px; border:1px solid rgba(255,255,255,0.06); border-radius:8px;">
-      <img src="decklogo.png" height="28" style="width:auto;" alt="Grene">
+      <img src="decklogo.png" height="48" style="width:auto;" alt="Grene">
       <div style="font-size:13px; color:var(--muted);">naomi@grene.co.uk · grene.co.uk</div>
     </div>
   </div>
 
+  <!-- 14. SOURCES -->
+  <div class="slide bg-black">
+    <div class="label">Sources</div>
+    <div class="headline" style="font-size:clamp(24px,3.5vw,40px);">References</div>
+
+    <div style="margin-top:32px; flex:1; display:flex; flex-direction:column; gap:2px;">
+
+      <div style="display:grid; grid-template-columns:28px 1fr; gap:0 16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--lime); padding-top:2px;">[1]</div>
+        <div><div style="font-size:13px; color:var(--white); margin-bottom:2px;">Skills for Care — The State of the Adult Social Care Sector and Workforce in England, 2024</div><div style="font-size:12px; color:var(--muted);">Source for: 1.6M workforce · £77.8B economic contribution · 40,000+ CQC-regulated sites · 500,000 additional carers needed by 2050</div></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:28px 1fr; gap:0 16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--lime); padding-top:2px;">[2]</div>
+        <div><div style="font-size:13px; color:var(--white); margin-bottom:2px;">CQC — The State of Health Care and Adult Social Care in England, 2024/25</div><div style="font-size:12px; color:var(--muted);">Source for: ~40,000 CQC-regulated sites · 17,000 provider organisations · regulatory framework context</div></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:28px 1fr; gap:0 16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--lime); padding-top:2px;">[3]</div>
+        <div><div style="font-size:13px; color:var(--white); margin-bottom:2px;">CQC — Single Assessment Framework guidance, 2025</div><div style="font-size:12px; color:var(--muted);">Source for: 34 quality statements · 5 regulatory domains (Safe, Effective, Caring, Responsive, Well-led) · SAF final guidance expected summer 2026</div></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:28px 1fr; gap:0 16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--lime); padding-top:2px;">[4]</div>
+        <div><div style="font-size:13px; color:var(--white); margin-bottom:2px;">LaingBuisson — UK Care Homes and Home Care Market Report, 2024</div><div style="font-size:12px; color:var(--muted);">Source for: sector revenue and market size context</div></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:28px 1fr; gap:0 16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--lime); padding-top:2px;">[5]</div>
+        <div><div style="font-size:13px; color:var(--white); margin-bottom:2px;">Manager interviews conducted by Grene, 2024–2025</div><div style="font-size:12px; color:var(--muted);">Source for: 2 to 6 weeks manager time per inspection · compliance admin as 30–50% of manager time · problem and solution validation</div></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:28px 1fr; gap:0 16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--lime); padding-top:2px;">[6]</div>
+        <div><div style="font-size:13px; color:var(--white); margin-bottom:2px;">DHSC — People at the Heart of Care: Adult Social Care Reform White Paper, 2021</div><div style="font-size:12px; color:var(--muted);">Source for: sector investment priorities and regulatory reform context</div></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:28px 1fr; gap:0 16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--lime); padding-top:2px;">[7]</div>
+        <div><div style="font-size:13px; color:var(--white); margin-bottom:2px;">Health and Social Care Act 2008 (Regulated Activities) Regulations 2014</div><div style="font-size:12px; color:var(--muted);">Source for: CQC regulatory framework and registration requirements</div></div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:20px; padding:14px 20px; border:1px solid rgba(255,255,255,0.06); border-radius:8px; font-size:12px; color:var(--muted); line-height:1.6;">
+      Financial projections, pricing, ARR targets, and market opportunity calculations are Grene's own analysis based on the above sources. Full financial model and references available on request.
+    </div>
+  </div>
 
 </div>
 
@@ -1085,7 +1200,7 @@
 <nav class="nav">
   <button onclick="prev()" title="Previous">←</button>
   <div class="dots" id="dots"></div>
-  <span class="nav-counter" id="counter">1 / 13</span>
+  <span class="nav-counter" id="counter">1 / 14</span>
   <button onclick="next()" title="Next">→</button>
 </nav>
 
